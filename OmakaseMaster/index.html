@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OmakaseMaster - 利用規約・プライバシーポリシー</title>
+    <title>sushiApp - Terms of Service & Privacy Policy</title>
     <style>
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -54,29 +54,215 @@
             background-color: #f8f9fa;
             border-radius: 10px;
         }
+        .language-switcher {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: #2D4A3E;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.3s;
+        }
+        .language-switcher:hover {
+            background-color: #1e3329;
+        }
+        .language-menu {
+            display: none;
+            position: absolute;
+            top: 50px;
+            right: 0;
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            overflow: hidden;
+            z-index: 1000;
+        }
+        .language-menu.show {
+            display: block;
+        }
+        .language-option {
+            display: block;
+            padding: 10px 20px;
+            color: #333;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+        .language-option:hover {
+            background-color: #f8f9fa;
+        }
+        .language-option.active {
+            background-color: #2D4A3E;
+            color: white;
+        }
+        @media (max-width: 768px) {
+            .language-switcher {
+                position: relative;
+                top: 0;
+                right: 0;
+                margin-bottom: 20px;
+            }
+            .language-menu {
+                position: relative;
+                top: 10px;
+                right: auto;
+                width: 100%;
+                max-width: 200px;
+                margin: 0 auto;
+            }
+        }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>OmakaseMaster</h1>
-        <div class="app-icon" style="background: linear-gradient(135deg, #2D4A3E, #4A7C59); display: flex; align-items: center; justify-content: center; color: white; font-size: 24px; font-weight: bold;">
-            寿司
+    <div style="position: relative;">
+        <div class="language-switcher" onclick="toggleLanguageMenu()">
+            <span id="current-language">EN</span> ▼
         </div>
-        
+        <div class="language-menu" id="language-menu">
+            <a href="#" class="language-option active" onclick="changeLanguage('en')">English</a>
+            <a href="#" class="language-option" onclick="changeLanguage('ja')">日本語</a>
+            <a href="#" class="language-option" onclick="changeLanguage('zh')">中文</a>
+            <a href="#" class="language-option" onclick="changeLanguage('ko')">한국어</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1>sushiApp</h1>
+        <div class="app-icon" style="background: linear-gradient(135deg, #2D4A3E, #4A7C59); display: flex; align-items: center; justify-content: center; color: white; font-size: 24px; font-weight: bold;">
+            <span id="app-icon-text">Sushi</span>
+        </div>
+
         <div class="app-info">
-            <h2>アプリ情報</h2>
-            <p><strong>アプリ名:</strong> OmakaseMaster（寿司アプリ）</p>
-            <p><strong>提供者:</strong> Hideaki Murasawa</p>
-            <p><strong>カテゴリ:</strong> ライフスタイル・教育</p>
-            <p><strong>バージョン:</strong> 1.1.2</p>
+            <h2 id="app-info-title">App Information</h2>
+            <p><strong id="app-name-label">App Name:</strong> <span id="app-name-value">sushiApp (Sushi App)</span></p>
+            <p><strong id="provider-label">Provider:</strong> Hideaki Murasawa</p>
+            <p><strong id="category-label">Category:</strong> <span id="category-value">Lifestyle・Education</span></p>
+            <p><strong id="version-label">Version:</strong> 1.1.2</p>
         </div>
 
         <div class="links">
-            <h2>法的文書</h2>
-            <a href="terms-of-service.html" class="link-button">利用規約</a>
-            <a href="privacy-policy.html" class="link-button">プライバシーポリシー</a>
+            <h2 id="legal-docs-title">Legal Documents</h2>
+            <a href="terms-of-service.html" class="link-button" id="terms-link">Terms of Service</a>
+            <a href="privacy-policy.html" class="link-button" id="privacy-link">Privacy Policy</a>
         </div>
     </div>
+
+    <script>
+        const translations = {
+            en: {
+                title: 'sushiApp - Terms of Service & Privacy Policy',
+                appIconText: 'Sushi',
+                appInfoTitle: 'App Information',
+                appNameLabel: 'App Name:',
+                appNameValue: 'sushiApp (Sushi App)',
+                providerLabel: 'Provider:',
+                categoryLabel: 'Category:',
+                categoryValue: 'Lifestyle・Education',
+                versionLabel: 'Version:',
+                legalDocsTitle: 'Legal Documents',
+                termsLink: 'Terms of Service',
+                privacyLink: 'Privacy Policy'
+            },
+            ja: {
+                title: 'sushiApp - 利用規約・プライバシーポリシー',
+                appIconText: '寿司',
+                appInfoTitle: 'アプリ情報',
+                appNameLabel: 'アプリ名:',
+                appNameValue: 'sushiApp（寿司アプリ）',
+                providerLabel: '提供者:',
+                categoryLabel: 'カテゴリ:',
+                categoryValue: 'ライフスタイル・教育',
+                versionLabel: 'バージョン:',
+                legalDocsTitle: '法的文書',
+                termsLink: '利用規約',
+                privacyLink: 'プライバシーポリシー'
+            },
+            zh: {
+                title: 'sushiApp - 服务条款和隐私政策',
+                appIconText: '寿司',
+                appInfoTitle: '应用信息',
+                appNameLabel: '应用名称:',
+                appNameValue: 'sushiApp（寿司应用）',
+                providerLabel: '提供者:',
+                categoryLabel: '类别:',
+                categoryValue: '生活方式・教育',
+                versionLabel: '版本:',
+                legalDocsTitle: '法律文件',
+                termsLink: '服务条款',
+                privacyLink: '隐私政策'
+            },
+            ko: {
+                title: 'sushiApp - 이용약관 및 개인정보처리방침',
+                appIconText: '스시',
+                appInfoTitle: '앱 정보',
+                appNameLabel: '앱 이름:',
+                appNameValue: 'sushiApp（스시 앱）',
+                providerLabel: '제공자:',
+                categoryLabel: '카테고리:',
+                categoryValue: '라이프스타일・교육',
+                versionLabel: '버전:',
+                legalDocsTitle: '법적 문서',
+                termsLink: '이용약관',
+                privacyLink: '개인정보처리방침'
+            }
+        };
+
+        let currentLanguage = 'en';
+
+        function toggleLanguageMenu() {
+            const menu = document.getElementById('language-menu');
+            menu.classList.toggle('show');
+        }
+
+        function changeLanguage(lang) {
+            currentLanguage = lang;
+            const menu = document.getElementById('language-menu');
+            menu.classList.remove('show');
+
+            // Update current language display
+            const langCodes = { en: 'EN', ja: 'JP', zh: 'CN', ko: 'KR' };
+            document.getElementById('current-language').textContent = langCodes[lang];
+
+            // Update active language option
+            document.querySelectorAll('.language-option').forEach(option => {
+                option.classList.remove('active');
+            });
+            event.target.classList.add('active');
+
+            // Update all text content
+            const t = translations[lang];
+            document.title = t.title;
+            document.getElementById('app-icon-text').textContent = t.appIconText;
+            document.getElementById('app-info-title').textContent = t.appInfoTitle;
+            document.getElementById('app-name-label').textContent = t.appNameLabel;
+            document.getElementById('app-name-value').textContent = t.appNameValue;
+            document.getElementById('provider-label').textContent = t.providerLabel;
+            document.getElementById('category-label').textContent = t.categoryLabel;
+            document.getElementById('category-value').textContent = t.categoryValue;
+            document.getElementById('version-label').textContent = t.versionLabel;
+            document.getElementById('legal-docs-title').textContent = t.legalDocsTitle;
+            document.getElementById('terms-link').textContent = t.termsLink;
+            document.getElementById('privacy-link').textContent = t.privacyLink;
+        }
+
+        // Close language menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const languageSwitcher = document.querySelector('.language-switcher');
+            const languageMenu = document.getElementById('language-menu');
+
+            if (!languageSwitcher.contains(event.target) && !languageMenu.contains(event.target)) {
+                languageMenu.classList.remove('show');
+            }
+        });
+
+        // Set default language to English on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            changeLanguage('en');
+        });
+    </script>
 </body>
 </html>
 
