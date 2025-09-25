@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>プライバシーポリシー - sushiApp</title>
+    <title>Privacy Policy - sushiApp</title>
     <style>
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -73,17 +73,89 @@
             border-radius: 5px;
             margin-bottom: 20px;
         }
+        .language-switcher {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: #2D4A3E;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.3s;
+        }
+        .language-switcher:hover {
+            background-color: #1e3329;
+        }
+        .language-menu {
+            display: none;
+            position: absolute;
+            top: 50px;
+            right: 0;
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            overflow: hidden;
+            z-index: 1000;
+        }
+        .language-menu.show {
+            display: block;
+        }
+        .language-option {
+            display: block;
+            padding: 10px 20px;
+            color: #333;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+        .language-option:hover {
+            background-color: #f8f9fa;
+        }
+        .language-option.active {
+            background-color: #2D4A3E;
+            color: white;
+        }
+        @media (max-width: 768px) {
+            .language-switcher {
+                position: relative;
+                top: 0;
+                right: 0;
+                margin-bottom: 20px;
+            }
+            .language-menu {
+                position: relative;
+                top: 10px;
+                right: auto;
+                width: 100%;
+                max-width: 200px;
+                margin: 0 auto;
+            }
+        }
     </style>
 </head>
 <body>
+    <div style="position: relative;">
+        <div class="language-switcher" onclick="toggleLanguageMenu()">
+            <span id="current-language">EN</span> ▼
+        </div>
+        <div class="language-menu" id="language-menu">
+            <a href="#" class="language-option active" onclick="changeLanguage('en')">English</a>
+            <a href="#" class="language-option" onclick="changeLanguage('ja')">日本語</a>
+            <a href="#" class="language-option" onclick="changeLanguage('zh')">中文</a>
+            <a href="#" class="language-option" onclick="changeLanguage('ko')">한국어</a>
+        </div>
+    </div>
+
     <div class="container">
-        <a href="index.html" class="back-link">← トップページに戻る</a>
-        
-        <h1>プライバシーポリシー</h1>
-        
-        <p><strong>アプリ名:</strong> sushiApp（寿司アプリ）<br>
-        <strong>提供者:</strong> Hideaki Murasawa<br>
-        <strong>カテゴリ:</strong> ライフスタイル・教育</p>
+        <a href="index.html" class="back-link" id="back-link">← Back to Home</a>
+
+        <h1 id="page-title">Privacy Policy</h1>
+
+        <p><strong id="app-name-label">App Name:</strong> <span id="app-name-value">sushiApp (Sushi App)</span><br>
+        <strong id="provider-label">Provider:</strong> Hideaki Murasawa<br>
+        <strong id="category-label">Category:</strong> <span id="category-value">Lifestyle・Education</span></p>
 
         <h2>1. 基本方針</h2>
         <p>sushiApp（以下「本アプリ」）は、ユーザーのプライバシーを最重要視しています。本アプリは、寿司に関する学習・情報提供サービスを提供しており、ユーザーの個人情報の保護に万全を期しています。</p>
@@ -163,15 +235,124 @@
         <p>本プライバシーポリシーは日本法に準拠し、日本の裁判所を管轄裁判所とします。</p>
 
         <div class="contact-info">
-            <h3>お問い合わせ</h3>
-            <p>本プライバシーポリシーに関するお問い合わせは、App Store Connect経由でお願いいたします。</p>
-            <p><strong>アプリ提供者:</strong> Hideaki Murasawa</p>
+            <h3 id="contact-title">Contact</h3>
+            <p id="contact-text">For inquiries regarding this Privacy Policy, please contact via App Store Connect.</p>
+            <p><strong id="provider-contact-label">App Provider:</strong> Hideaki Murasawa</p>
         </div>
 
-        <div class="last-updated">
-            最終更新日: 2025年1月27日
+        <div class="last-updated" id="last-updated">
+            Last Updated: January 27, 2025
         </div>
     </div>
+
+    <script>
+        const translations = {
+            en: {
+                title: 'Privacy Policy - sushiApp',
+                pageTitle: 'Privacy Policy',
+                backLink: '← Back to Home',
+                appNameLabel: 'App Name:',
+                appNameValue: 'sushiApp (Sushi App)',
+                providerLabel: 'Provider:',
+                categoryLabel: 'Category:',
+                categoryValue: 'Lifestyle・Education',
+                contactTitle: 'Contact',
+                contactText: 'For inquiries regarding this Privacy Policy, please contact via App Store Connect.',
+                providerContactLabel: 'App Provider:',
+                lastUpdated: 'Last Updated: January 27, 2025'
+            },
+            ja: {
+                title: 'プライバシーポリシー - sushiApp',
+                pageTitle: 'プライバシーポリシー',
+                backLink: '← トップページに戻る',
+                appNameLabel: 'アプリ名:',
+                appNameValue: 'sushiApp（寿司アプリ）',
+                providerLabel: '提供者:',
+                categoryLabel: 'カテゴリ:',
+                categoryValue: 'ライフスタイル・教育',
+                contactTitle: 'お問い合わせ',
+                contactText: '本プライバシーポリシーに関するお問い合わせは、App Store Connect経由でお願いいたします。',
+                providerContactLabel: 'アプリ提供者:',
+                lastUpdated: '最終更新日: 2025年1月27日'
+            },
+            zh: {
+                title: '隐私政策 - sushiApp',
+                pageTitle: '隐私政策',
+                backLink: '← 返回主页',
+                appNameLabel: '应用名称:',
+                appNameValue: 'sushiApp（寿司应用）',
+                providerLabel: '提供者:',
+                categoryLabel: '类别:',
+                categoryValue: '生活方式・教育',
+                contactTitle: '联系方式',
+                contactText: '有关此隐私政策的查询，请通过App Store Connect联系。',
+                providerContactLabel: '应用提供者:',
+                lastUpdated: '最后更新日期: 2025年1月27日'
+            },
+            ko: {
+                title: '개인정보처리방침 - sushiApp',
+                pageTitle: '개인정보처리방침',
+                backLink: '← 홈으로 돌아가기',
+                appNameLabel: '앱 이름:',
+                appNameValue: 'sushiApp（스시 앱）',
+                providerLabel: '제공자:',
+                categoryLabel: '카테고리:',
+                categoryValue: '라이프스타일・교육',
+                contactTitle: '연락처',
+                contactText: '이 개인정보처리방침에 대한 문의는 App Store Connect를 통해 연락해 주세요.',
+                providerContactLabel: '앱 제공자:',
+                lastUpdated: '최종 업데이트: 2025년 1월 27일'
+            }
+        };
+
+        let currentLanguage = 'en';
+
+        function toggleLanguageMenu() {
+            const menu = document.getElementById('language-menu');
+            menu.classList.toggle('show');
+        }
+
+        function changeLanguage(lang) {
+            currentLanguage = lang;
+            const menu = document.getElementById('language-menu');
+            menu.classList.remove('show');
+
+            const langCodes = { en: 'EN', ja: 'JP', zh: 'CN', ko: 'KR' };
+            document.getElementById('current-language').textContent = langCodes[lang];
+
+            document.querySelectorAll('.language-option').forEach(option => {
+                option.classList.remove('active');
+            });
+            event.target.classList.add('active');
+
+            const t = translations[lang];
+            document.title = t.title;
+            document.getElementById('page-title').textContent = t.pageTitle;
+            document.getElementById('back-link').textContent = t.backLink;
+            document.getElementById('app-name-label').textContent = t.appNameLabel;
+            document.getElementById('app-name-value').textContent = t.appNameValue;
+            document.getElementById('provider-label').textContent = t.providerLabel;
+            document.getElementById('category-label').textContent = t.categoryLabel;
+            document.getElementById('category-value').textContent = t.categoryValue;
+            document.getElementById('contact-title').textContent = t.contactTitle;
+            document.getElementById('contact-text').textContent = t.contactText;
+            document.getElementById('provider-contact-label').textContent = t.providerContactLabel;
+            document.getElementById('last-updated').textContent = t.lastUpdated;
+        }
+
+        document.addEventListener('click', function(event) {
+            const languageSwitcher = document.querySelector('.language-switcher');
+            const languageMenu = document.getElementById('language-menu');
+
+            if (!languageSwitcher.contains(event.target) && !languageMenu.contains(event.target)) {
+                languageMenu.classList.remove('show');
+            }
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            changeLanguage('en');
+        });
+    </script>
 </body>
 </html>
 
