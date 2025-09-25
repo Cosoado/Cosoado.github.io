@@ -117,6 +117,12 @@
             background-color: #2D4A3E;
             color: white;
         }
+        .content-section {
+            display: none;
+        }
+        .content-section.active {
+            display: block;
+        }
         @media (max-width: 768px) {
             .language-switcher {
                 position: relative;
@@ -149,162 +155,400 @@
     </div>
 
     <div class="container">
-        <a href="index.html" class="back-link" id="back-link">← Back to Home</a>
+        <!-- English Content -->
+        <div id="content-en" class="content-section active">
+            <a href="index.html" class="back-link">← Back to Home</a>
 
-        <h1 id="page-title">Privacy Policy</h1>
+            <h1>Privacy Policy</h1>
 
-        <p><strong id="app-name-label">App Name:</strong> <span id="app-name-value">sushiApp (Sushi App)</span><br>
-        <strong id="provider-label">Provider:</strong> Hideaki Murasawa<br>
-        <strong id="category-label">Category:</strong> <span id="category-value">Lifestyle・Education</span></p>
+            <p><strong>App Name:</strong> sushiApp (Sushi App)<br>
+            <strong>Provider:</strong> Hideaki Murasawa<br>
+            <strong>Category:</strong> Lifestyle・Education</p>
 
-        <h2>1. 基本方針</h2>
-        <p>sushiApp（以下「本アプリ」）は、ユーザーのプライバシーを最重要視しています。本アプリは、寿司に関する学習・情報提供サービスを提供しており、ユーザーの個人情報の保護に万全を期しています。</p>
+            <h2>1. Basic Policy</h2>
+            <p>sushiApp (hereinafter referred to as "this App") places the highest priority on user privacy. This App provides sushi-related learning and information services, and we take every possible measure to protect users' personal information.</p>
 
-        <h2>2. 収集する情報</h2>
-        <p>本アプリは以下の原則に基づいて運営されています：</p>
-        <ul>
-            <li><strong>個人情報の外部送信なし:</strong> ユーザーが入力した個人情報（学習履歴、設定等）は一切外部サーバーに送信されません</li>
-            <li><strong>ローカル保存のみ:</strong> 全ての入力データはユーザーの端末内にのみ保存されます</li>
-            <li><strong>自動削除:</strong> アプリを削除すると、保存された全てのデータが完全に削除されます</li>
-        </ul>
+            <h2>2. Information We Collect</h2>
+            <p>This App operates based on the following principles:</p>
+            <ul>
+                <li><strong>No external transmission of personal information:</strong> Personal information entered by users (learning history, settings, etc.) is never transmitted to external servers</li>
+                <li><strong>Local storage only:</strong> All input data is stored only within the user's device</li>
+                <li><strong>Automatic deletion:</strong> All stored data will be completely deleted when the app is uninstalled</li>
+            </ul>
 
-        <h2>3. データの利用目的</h2>
-        <p>収集したデータは以下の目的でのみ利用します：</p>
-        <ul>
-            <li>学習履歴の端末内保存</li>
-            <li>アプリの機能向上</li>
-            <li>ユーザー体験の向上</li>
-        </ul>
+            <h2>3. Purpose of Data Use</h2>
+            <p>Collected data is used only for the following purposes:</p>
+            <ul>
+                <li>Local storage of learning history</li>
+                <li>App functionality improvement</li>
+                <li>User experience enhancement</li>
+            </ul>
 
-        <h2>4. 第三者との共有</h2>
-        <p>本アプリは以下を除き、ユーザーの情報を第三者と共有することはありません：</p>
-        <ul>
-            <li><strong>Google AdMob:</strong> 広告配信のため、デバイス識別子等の技術的情報のみ</li>
-            <li><strong>法的義務:</strong> 法令に基づく開示要求がある場合</li>
-        </ul>
+            <h2>4. Sharing with Third Parties</h2>
+            <p>This App does not share user information with third parties except for the following:</p>
+            <ul>
+                <li><strong>Google AdMob:</strong> Only technical information such as device identifiers for advertising delivery</li>
+                <li><strong>Legal obligations:</strong> When there is a disclosure request based on laws and regulations</li>
+            </ul>
 
-        <h2>5. 広告について</h2>
-        <p>本アプリではGoogle AdMobを使用して広告を表示します：</p>
-        <ul>
-            <li>バナー広告とリワード広告を表示</li>
-            <li>パーソナライズされた広告は無効に設定</li>
-            <li>広告表示のため最小限の技術的情報のみ使用</li>
-            <li>広告の内容について当方は責任を負いません</li>
-        </ul>
+            <h2>5. About Advertising</h2>
+            <p>This App uses Google AdMob to display advertisements:</p>
+            <ul>
+                <li>Displays banner ads and reward ads</li>
+                <li>Personalized ads are disabled</li>
+                <li>Uses only minimal technical information for ad display</li>
+                <li>We are not responsible for the content of advertisements</li>
+            </ul>
 
-        <h2>6. データの保存期間</h2>
-        <ul>
-            <li><strong>学習データ:</strong> ユーザーが削除するまで端末内に保存</li>
-            <li><strong>設定データ:</strong> ユーザーが削除するまで端末内に保存</li>
-            <li><strong>アプリ削除時:</strong> 全てのデータが自動的に削除</li>
-        </ul>
+            <h2>6. Data Storage Period</h2>
+            <ul>
+                <li><strong>Learning data:</strong> Stored locally until deleted by user</li>
+                <li><strong>Settings data:</strong> Stored locally until deleted by user</li>
+                <li><strong>App deletion:</strong> All data is automatically deleted</li>
+            </ul>
 
-        <h2>7. セキュリティ</h2>
-        <p>本アプリは以下のセキュリティ対策を実施しています：</p>
-        <ul>
-            <li>データの暗号化保存</li>
-            <li>安全な通信プロトコル（HTTPS）の使用</li>
-            <li>定期的なセキュリティ監査</li>
-            <li>最新のセキュリティアップデートの適用</li>
-        </ul>
+            <h2>7. Security</h2>
+            <p>This App implements the following security measures:</p>
+            <ul>
+                <li>Encrypted data storage</li>
+                <li>Use of secure communication protocols (HTTPS)</li>
+                <li>Regular security audits</li>
+                <li>Application of latest security updates</li>
+            </ul>
 
-        <h2>8. ユーザーの権利</h2>
-        <p>ユーザーは以下の権利を有します：</p>
-        <ul>
-            <li>保存されたデータの確認</li>
-            <li>保存されたデータの削除</li>
-            <li>アプリの利用停止</li>
-            <li>本ポリシーに関する問い合わせ</li>
-        </ul>
+            <h2>8. User Rights</h2>
+            <p>Users have the following rights:</p>
+            <ul>
+                <li>Viewing stored data</li>
+                <li>Deleting stored data</li>
+                <li>Discontinuing app use</li>
+                <li>Inquiring about this policy</li>
+            </ul>
 
-        <h2>9. 未成年者の利用</h2>
-        <p>本アプリは13歳未満の方の利用を想定していません。13歳未満の方が利用される場合は、保護者の同意を得てからご利用ください。</p>
+            <h2>9. Use by Minors</h2>
+            <p>This App is not intended for use by persons under 13 years of age. If persons under 13 years of age use this App, please obtain parental consent before use.</p>
 
-        <h2>10. 他社サービスとの連携</h2>
-        <p>本アプリは以下の外部サービスを利用しています：</p>
-        <ul>
-            <li><strong>Google AdMob:</strong> 広告配信</li>
-            <li><strong>Firebase:</strong> アプリバージョン管理のみ</li>
-        </ul>
-        <p>これらのサービスのプライバシーポリシーもご確認ください。</p>
+            <h2>10. Integration with Third-Party Services</h2>
+            <p>This App uses the following external services:</p>
+            <ul>
+                <li><strong>Google AdMob:</strong> Advertising delivery</li>
+                <li><strong>Firebase:</strong> App version management only</li>
+            </ul>
+            <p>Please also review the privacy policies of these services.</p>
 
-        <h2>11. ポリシーの変更</h2>
-        <p>本プライバシーポリシーは必要に応じて更新される場合があります。重要な変更については、アプリ内で通知いたします。最新版は本ページでご確認いただけます。</p>
+            <h2>11. Policy Changes</h2>
+            <p>This Privacy Policy may be updated as necessary. Important changes will be notified within the app. The latest version can be found on this page.</p>
 
-        <h2>12. 準拠法</h2>
-        <p>本プライバシーポリシーは日本法に準拠し、日本の裁判所を管轄裁判所とします。</p>
+            <h2>12. Governing Law</h2>
+            <p>This Privacy Policy is governed by Japanese law, and Japanese courts shall have jurisdiction.</p>
 
-        <div class="contact-info">
-            <h3 id="contact-title">Contact</h3>
-            <p id="contact-text">For inquiries regarding this Privacy Policy, please contact via App Store Connect.</p>
-            <p><strong id="provider-contact-label">App Provider:</strong> Hideaki Murasawa</p>
+            <div class="contact-info">
+                <h3>Contact</h3>
+                <p>For inquiries regarding this Privacy Policy, please contact via App Store Connect.</p>
+                <p><strong>App Provider:</strong> Hideaki Murasawa</p>
+            </div>
+
+            <div class="last-updated">
+                Last Updated: January 27, 2025
+            </div>
         </div>
 
-        <div class="last-updated" id="last-updated">
-            Last Updated: January 27, 2025
+        <!-- Japanese Content -->
+        <div id="content-ja" class="content-section">
+            <a href="index.html" class="back-link">← トップページに戻る</a>
+
+            <h1>プライバシーポリシー</h1>
+
+            <p><strong>アプリ名:</strong> sushiApp（寿司アプリ）<br>
+            <strong>提供者:</strong> Hideaki Murasawa<br>
+            <strong>カテゴリ:</strong> ライフスタイル・教育</p>
+
+            <h2>1. 基本方針</h2>
+            <p>sushiApp（以下「本アプリ」）は、ユーザーのプライバシーを最重要視しています。本アプリは、寿司に関する学習・情報提供サービスを提供しており、ユーザーの個人情報の保護に万全を期しています。</p>
+
+            <h2>2. 収集する情報</h2>
+            <p>本アプリは以下の原則に基づいて運営されています：</p>
+            <ul>
+                <li><strong>個人情報の外部送信なし:</strong> ユーザーが入力した個人情報（学習履歴、設定等）は一切外部サーバーに送信されません</li>
+                <li><strong>ローカル保存のみ:</strong> 全ての入力データはユーザーの端末内にのみ保存されます</li>
+                <li><strong>自動削除:</strong> アプリを削除すると、保存された全てのデータが完全に削除されます</li>
+            </ul>
+
+            <h2>3. データの利用目的</h2>
+            <p>収集したデータは以下の目的でのみ利用します：</p>
+            <ul>
+                <li>学習履歴の端末内保存</li>
+                <li>アプリの機能向上</li>
+                <li>ユーザー体験の向上</li>
+            </ul>
+
+            <h2>4. 第三者との共有</h2>
+            <p>本アプリは以下を除き、ユーザーの情報を第三者と共有することはありません：</p>
+            <ul>
+                <li><strong>Google AdMob:</strong> 広告配信のため、デバイス識別子等の技術的情報のみ</li>
+                <li><strong>法的義務:</strong> 法令に基づく開示要求がある場合</li>
+            </ul>
+
+            <h2>5. 広告について</h2>
+            <p>本アプリではGoogle AdMobを使用して広告を表示します：</p>
+            <ul>
+                <li>バナー広告とリワード広告を表示</li>
+                <li>パーソナライズされた広告は無効に設定</li>
+                <li>広告表示のため最小限の技術的情報のみ使用</li>
+                <li>広告の内容について当方は責任を負いません</li>
+            </ul>
+
+            <h2>6. データの保存期間</h2>
+            <ul>
+                <li><strong>学習データ:</strong> ユーザーが削除するまで端末内に保存</li>
+                <li><strong>設定データ:</strong> ユーザーが削除するまで端末内に保存</li>
+                <li><strong>アプリ削除時:</strong> 全てのデータが自動的に削除</li>
+            </ul>
+
+            <h2>7. セキュリティ</h2>
+            <p>本アプリは以下のセキュリティ対策を実施しています：</p>
+            <ul>
+                <li>データの暗号化保存</li>
+                <li>安全な通信プロトコル（HTTPS）の使用</li>
+                <li>定期的なセキュリティ監査</li>
+                <li>最新のセキュリティアップデートの適用</li>
+            </ul>
+
+            <h2>8. ユーザーの権利</h2>
+            <p>ユーザーは以下の権利を有します：</p>
+            <ul>
+                <li>保存されたデータの確認</li>
+                <li>保存されたデータの削除</li>
+                <li>アプリの利用停止</li>
+                <li>本ポリシーに関する問い合わせ</li>
+            </ul>
+
+            <h2>9. 未成年者の利用</h2>
+            <p>本アプリは13歳未満の方の利用を想定していません。13歳未満の方が利用される場合は、保護者の同意を得てからご利用ください。</p>
+
+            <h2>10. 他社サービスとの連携</h2>
+            <p>本アプリは以下の外部サービスを利用しています：</p>
+            <ul>
+                <li><strong>Google AdMob:</strong> 広告配信</li>
+                <li><strong>Firebase:</strong> アプリバージョン管理のみ</li>
+            </ul>
+            <p>これらのサービスのプライバシーポリシーもご確認ください。</p>
+
+            <h2>11. ポリシーの変更</h2>
+            <p>本プライバシーポリシーは必要に応じて更新される場合があります。重要な変更については、アプリ内で通知いたします。最新版は本ページでご確認いただけます。</p>
+
+            <h2>12. 準拠法</h2>
+            <p>本プライバシーポリシーは日本法に準拠し、日本の裁判所を管轄裁判所とします。</p>
+
+            <div class="contact-info">
+                <h3>お問い合わせ</h3>
+                <p>本プライバシーポリシーに関するお問い合わせは、App Store Connect経由でお願いいたします。</p>
+                <p><strong>アプリ提供者:</strong> Hideaki Murasawa</p>
+            </div>
+
+            <div class="last-updated">
+                最終更新日: 2025年1月27日
+            </div>
+        </div>
+
+        <!-- Chinese Content -->
+        <div id="content-zh" class="content-section">
+            <a href="index.html" class="back-link">← 返回主页</a>
+
+            <h1>隐私政策</h1>
+
+            <p><strong>应用名称:</strong> sushiApp（寿司应用）<br>
+            <strong>提供者:</strong> Hideaki Murasawa<br>
+            <strong>类别:</strong> 生活方式・教育</p>
+
+            <h2>1. 基本方针</h2>
+            <p>sushiApp（以下简称"本应用"）将用户隐私视为最重要的事项。本应用提供寿司相关的学习和信息服务，我们在保护用户个人信息方面做到万无一失。</p>
+
+            <h2>2. 收集的信息</h2>
+            <p>本应用基于以下原则运营：</p>
+            <ul>
+                <li><strong>不向外部发送个人信息:</strong> 用户输入的个人信息（学习历史、设置等）绝不会发送到外部服务器</li>
+                <li><strong>仅本地存储:</strong> 所有输入数据仅存储在用户设备内</li>
+                <li><strong>自动删除:</strong> 删除应用时，所有存储的数据都会被完全删除</li>
+            </ul>
+
+            <h2>3. 数据使用目的</h2>
+            <p>收集的数据仅用于以下目的：</p>
+            <ul>
+                <li>学习历史的设备内存储</li>
+                <li>应用功能改进</li>
+                <li>用户体验提升</li>
+            </ul>
+
+            <h2>4. 与第三方共享</h2>
+            <p>除以下情况外，本应用不会与第三方共享用户信息：</p>
+            <ul>
+                <li><strong>Google AdMob:</strong> 仅为广告投放提供设备标识符等技术信息</li>
+                <li><strong>法律义务:</strong> 基于法律法规有披露要求时</li>
+            </ul>
+
+            <h2>5. 关于广告</h2>
+            <p>本应用使用Google AdMob显示广告：</p>
+            <ul>
+                <li>显示横幅广告和奖励广告</li>
+                <li>个性化广告设置为禁用</li>
+                <li>仅使用广告显示所需的最少技术信息</li>
+                <li>我们对广告内容不承担责任</li>
+            </ul>
+
+            <h2>6. 数据存储期间</h2>
+            <ul>
+                <li><strong>学习数据:</strong> 存储在设备内直到用户删除</li>
+                <li><strong>设置数据:</strong> 存储在设备内直到用户删除</li>
+                <li><strong>应用删除时:</strong> 所有数据自动删除</li>
+            </ul>
+
+            <h2>7. 安全性</h2>
+            <p>本应用实施以下安全措施：</p>
+            <ul>
+                <li>数据加密存储</li>
+                <li>使用安全通信协议（HTTPS）</li>
+                <li>定期安全审计</li>
+                <li>应用最新安全更新</li>
+            </ul>
+
+            <h2>8. 用户权利</h2>
+            <p>用户拥有以下权利：</p>
+            <ul>
+                <li>确认存储的数据</li>
+                <li>删除存储的数据</li>
+                <li>停止使用应用</li>
+                <li>就本政策进行咨询</li>
+            </ul>
+
+            <h2>9. 未成年人使用</h2>
+            <p>本应用不适用于13岁以下人员使用。如果13岁以下人员使用，请在获得家长同意后使用。</p>
+
+            <h2>10. 与其他公司服务的协作</h2>
+            <p>本应用使用以下外部服务：</p>
+            <ul>
+                <li><strong>Google AdMob:</strong> 广告投放</li>
+                <li><strong>Firebase:</strong> 仅用于应用版本管理</li>
+            </ul>
+            <p>请也确认这些服务的隐私政策。</p>
+
+            <h2>11. 政策变更</h2>
+            <p>本隐私政策可能会根据需要进行更新。重要变更将在应用内通知。最新版本可在本页面确认。</p>
+
+            <h2>12. 适用法律</h2>
+            <p>本隐私政策适用日本法，以日本法院为管辖法院。</p>
+
+            <div class="contact-info">
+                <h3>联系方式</h3>
+                <p>有关本隐私政策的咨询，请通过App Store Connect联系。</p>
+                <p><strong>应用提供者:</strong> Hideaki Murasawa</p>
+            </div>
+
+            <div class="last-updated">
+                最后更新日期: 2025年1月27日
+            </div>
+        </div>
+
+        <!-- Korean Content -->
+        <div id="content-ko" class="content-section">
+            <a href="index.html" class="back-link">← 홈으로 돌아가기</a>
+
+            <h1>개인정보처리방침</h1>
+
+            <p><strong>앱 이름:</strong> sushiApp（스시 앱）<br>
+            <strong>제공자:</strong> Hideaki Murasawa<br>
+            <strong>카테고리:</strong> 라이프스타일・교육</p>
+
+            <h2>1. 기본방침</h2>
+            <p>sushiApp（이하 "본 앱"）은 사용자의 프라이버시를 최우선으로 고려합니다. 본 앱은 스시에 관한 학습・정보 제공 서비스를 제공하며, 사용자의 개인정보 보호에 만전을 기하고 있습니다.</p>
+
+            <h2>2. 수집하는 정보</h2>
+            <p>본 앱은 다음 원칙에 기반하여 운영됩니다:</p>
+            <ul>
+                <li><strong>개인정보의 외부 전송 없음:</strong> 사용자가 입력한 개인정보（학습 이력, 설정 등）는 일체 외부 서버로 전송되지 않습니다</li>
+                <li><strong>로컬 저장만:</strong> 모든 입력 데이터는 사용자의 단말기 내에만 저장됩니다</li>
+                <li><strong>자동 삭제:</strong> 앱을 삭제하면 저장된 모든 데이터가 완전히 삭제됩니다</li>
+            </ul>
+
+            <h2>3. 데이터의 이용목적</h2>
+            <p>수집한 데이터는 다음 목적으로만 이용합니다:</p>
+            <ul>
+                <li>학습 이력의 단말기 내 저장</li>
+                <li>앱의 기능 향상</li>
+                <li>사용자 경험의 향상</li>
+            </ul>
+
+            <h2>4. 제3자와의 공유</h2>
+            <p>본 앱은 다음을 제외하고 사용자의 정보를 제3자와 공유하지 않습니다:</p>
+            <ul>
+                <li><strong>Google AdMob:</strong> 광고 배신을 위해 디바이스 식별자 등의 기술적 정보만</li>
+                <li><strong>법적 의무:</strong> 법령에 기반한 공개 요구가 있는 경우</li>
+            </ul>
+
+            <h2>5. 광고에 대해</h2>
+            <p>본 앱에서는 Google AdMob을 사용하여 광고를 표시합니다:</p>
+            <ul>
+                <li>배너 광고와 리워드 광고를 표시</li>
+                <li>개인화된 광고는 무효로 설정</li>
+                <li>광고 표시를 위한 최소한의 기술적 정보만 사용</li>
+                <li>광고의 내용에 대해 당사는 책임을 지지 않습니다</li>
+            </ul>
+
+            <h2>6. 데이터의 보존기간</h2>
+            <ul>
+                <li><strong>학습 데이터:</strong> 사용자가 삭제할 때까지 단말기 내에 저장</li>
+                <li><strong>설정 데이터:</strong> 사용자가 삭제할 때까지 단말기 내에 저장</li>
+                <li><strong>앱 삭제시:</strong> 모든 데이터가 자동으로 삭제</li>
+            </ul>
+
+            <h2>7. 보안</h2>
+            <p>본 앱은 다음의 보안 대책을 실시하고 있습니다:</p>
+            <ul>
+                <li>데이터의 암호화 저장</li>
+                <li>안전한 통신 프로토콜（HTTPS）의 사용</li>
+                <li>정기적인 보안 감사</li>
+                <li>최신 보안 업데이트의 적용</li>
+            </ul>
+
+            <h2>8. 사용자의 권리</h2>
+            <p>사용자는 다음의 권리를 가집니다:</p>
+            <ul>
+                <li>저장된 데이터의 확인</li>
+                <li>저장된 데이터의 삭제</li>
+                <li>앱의 이용 중지</li>
+                <li>본 정책에 관한 문의</li>
+            </ul>
+
+            <h2>9. 미성년자의 이용</h2>
+            <p>본 앱은 13세 미만 분의 이용을 상정하지 않습니다. 13세 미만 분이 이용하실 경우에는 보호자의 동의를 얻은 후 이용해 주십시오.</p>
+
+            <h2>10. 타사 서비스와의 연계</h2>
+            <p>본 앱은 다음의 외부 서비스를 이용하고 있습니다:</p>
+            <ul>
+                <li><strong>Google AdMob:</strong> 광고 배신</li>
+                <li><strong>Firebase:</strong> 앱 버전 관리만</li>
+            </ul>
+            <p>이러한 서비스의 개인정보처리방침도 확인해 주십시오.</p>
+
+            <h2>11. 정책의 변경</h2>
+            <p>본 개인정보처리방침은 필요에 따라 업데이트될 수 있습니다. 중요한 변경에 대해서는 앱 내에서 통지하겠습니다. 최신 버전은 본 페이지에서 확인하실 수 있습니다.</p>
+
+            <h2>12. 준거법</h2>
+            <p>본 개인정보처리방침은 일본법에 준거하며, 일본의 법원을 관할 법원으로 합니다.</p>
+
+            <div class="contact-info">
+                <h3>문의</h3>
+                <p>본 개인정보처리방침에 관한 문의는 App Store Connect를 통해 부탁드립니다.</p>
+                <p><strong>앱 제공자:</strong> Hideaki Murasawa</p>
+            </div>
+
+            <div class="last-updated">
+                최종 업데이트: 2025년 1월 27일
+            </div>
         </div>
     </div>
 
     <script>
-        const translations = {
-            en: {
-                title: 'Privacy Policy - sushiApp',
-                pageTitle: 'Privacy Policy',
-                backLink: '← Back to Home',
-                appNameLabel: 'App Name:',
-                appNameValue: 'sushiApp (Sushi App)',
-                providerLabel: 'Provider:',
-                categoryLabel: 'Category:',
-                categoryValue: 'Lifestyle・Education',
-                contactTitle: 'Contact',
-                contactText: 'For inquiries regarding this Privacy Policy, please contact via App Store Connect.',
-                providerContactLabel: 'App Provider:',
-                lastUpdated: 'Last Updated: January 27, 2025'
-            },
-            ja: {
-                title: 'プライバシーポリシー - sushiApp',
-                pageTitle: 'プライバシーポリシー',
-                backLink: '← トップページに戻る',
-                appNameLabel: 'アプリ名:',
-                appNameValue: 'sushiApp（寿司アプリ）',
-                providerLabel: '提供者:',
-                categoryLabel: 'カテゴリ:',
-                categoryValue: 'ライフスタイル・教育',
-                contactTitle: 'お問い合わせ',
-                contactText: '本プライバシーポリシーに関するお問い合わせは、App Store Connect経由でお願いいたします。',
-                providerContactLabel: 'アプリ提供者:',
-                lastUpdated: '最終更新日: 2025年1月27日'
-            },
-            zh: {
-                title: '隐私政策 - sushiApp',
-                pageTitle: '隐私政策',
-                backLink: '← 返回主页',
-                appNameLabel: '应用名称:',
-                appNameValue: 'sushiApp（寿司应用）',
-                providerLabel: '提供者:',
-                categoryLabel: '类别:',
-                categoryValue: '生活方式・教育',
-                contactTitle: '联系方式',
-                contactText: '有关此隐私政策的查询，请通过App Store Connect联系。',
-                providerContactLabel: '应用提供者:',
-                lastUpdated: '最后更新日期: 2025年1月27日'
-            },
-            ko: {
-                title: '개인정보처리방침 - sushiApp',
-                pageTitle: '개인정보처리방침',
-                backLink: '← 홈으로 돌아가기',
-                appNameLabel: '앱 이름:',
-                appNameValue: 'sushiApp（스시 앱）',
-                providerLabel: '제공자:',
-                categoryLabel: '카테고리:',
-                categoryValue: '라이프스타일・교육',
-                contactTitle: '연락처',
-                contactText: '이 개인정보처리방침에 대한 문의는 App Store Connect를 통해 연락해 주세요.',
-                providerContactLabel: '앱 제공자:',
-                lastUpdated: '최종 업데이트: 2025년 1월 27일'
-            }
-        };
-
         let currentLanguage = 'en';
 
         function toggleLanguageMenu() {
@@ -317,29 +561,33 @@
             const menu = document.getElementById('language-menu');
             menu.classList.remove('show');
 
+            // Update language button
             const langCodes = { en: 'EN', ja: 'JP', zh: 'CN', ko: 'KR' };
             document.getElementById('current-language').textContent = langCodes[lang];
 
+            // Update active language option
             document.querySelectorAll('.language-option').forEach(option => {
                 option.classList.remove('active');
             });
             event.target.classList.add('active');
 
-            const t = translations[lang];
-            document.title = t.title;
-            document.getElementById('page-title').textContent = t.pageTitle;
-            document.getElementById('back-link').textContent = t.backLink;
-            document.getElementById('app-name-label').textContent = t.appNameLabel;
-            document.getElementById('app-name-value').textContent = t.appNameValue;
-            document.getElementById('provider-label').textContent = t.providerLabel;
-            document.getElementById('category-label').textContent = t.categoryLabel;
-            document.getElementById('category-value').textContent = t.categoryValue;
-            document.getElementById('contact-title').textContent = t.contactTitle;
-            document.getElementById('contact-text').textContent = t.contactText;
-            document.getElementById('provider-contact-label').textContent = t.providerContactLabel;
-            document.getElementById('last-updated').textContent = t.lastUpdated;
+            // Show/hide content sections
+            document.querySelectorAll('.content-section').forEach(section => {
+                section.classList.remove('active');
+            });
+            document.getElementById('content-' + lang).classList.add('active');
+
+            // Update page title
+            const titles = {
+                en: 'Privacy Policy - sushiApp',
+                ja: 'プライバシーポリシー - sushiApp',
+                zh: '隐私政策 - sushiApp',
+                ko: '개인정보처리방침 - sushiApp'
+            };
+            document.title = titles[lang];
         }
 
+        // Close language menu when clicking outside
         document.addEventListener('click', function(event) {
             const languageSwitcher = document.querySelector('.language-switcher');
             const languageMenu = document.getElementById('language-menu');
@@ -349,10 +597,10 @@
             }
         });
 
+        // Set default language to English on page load
         document.addEventListener('DOMContentLoaded', function() {
             changeLanguage('en');
         });
     </script>
 </body>
 </html>
-
