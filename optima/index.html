@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Optima - 物件管理システム</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#f5f3ff',
+                            100: '#ede9fe',
+                            200: '#ddd6fe',
+                            300: '#c4b5fd',
+                            400: '#a78bfa',
+                            500: '#8b5cf6',
+                            600: '#7c3aed',
+                            700: '#6d28d9',
+                            800: '#5b21b6',
+                            900: '#4c1d95',
+                            950: '#2e1065'
+                        },
+                        success: {
+                            50: '#ecfdf5',
+                            100: '#d1fae5',
+                            200: '#a7f3d0',
+                            300: '#6ee7b7',
+                            400: '#34d399',
+                            500: '#10b981',
+                            600: '#059669',
+                            700: '#047857',
+                            800: '#065f46',
+                            900: '#064e3b',
+                            950: '#022c22'
+                        },
+                        danger: {
+                            50: '#fef2f2',
+                            100: '#fee2e2',
+                            200: '#fecaca',
+                            300: '#fca5a5',
+                            400: '#f87171',
+                            500: '#ef4444',
+                            600: '#dc2626',
+                            700: '#b91c1c',
+                            800: '#991b1b',
+                            900: '#7f1d1d',
+                            950: '#450a0a'
+                        },
+                        info: {
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            200: '#bfdbfe',
+                            300: '#93c5fd',
+                            400: '#60a5fa',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                            800: '#1e40af',
+                            900: '#1e3a8a',
+                            950: '#172554'
+                        },
+                        warning: {
+                            50: '#fffbeb',
+                            100: '#fef3c7',
+                            200: '#fde68a',
+                            300: '#fcd34d',
+                            400: '#fbbf24',
+                            500: '#f59e0b',
+                            600: '#d97706',
+                            700: '#b45309',
+                            800: '#92400e',
+                            900: '#78350f',
+                            950: '#451a03'
+                        },
+                        secondary: {
+                            50: '#faf5ff',
+                            100: '#f3e8ff',
+                            200: '#e9d5ff',
+                            300: '#d8b4fe',
+                            400: '#c084fc',
+                            500: '#a855f7',
+                            600: '#9333ea',
+                            700: '#7e22ce',
+                            800: '#6b21a8',
+                            900: '#581c87',
+                            950: '#3b0764'
+                        },
+                        neutral: {
+                            50: '#f9fafb',
+                            100: '#f3f4f6',
+                            200: '#e5e7eb',
+                            300: '#d1d5db',
+                            400: '#9ca3af',
+                            500: '#6b7280',
+                            600: '#4b5563',
+                            700: '#374151',
+                            800: '#1f2937',
+                            900: '#111827',
+                            950: '#030712'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: #f9fafb;
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <!-- Page Header -->
+        <div class="mb-8">
+            <div class="flex items-center gap-3 mb-2">
+                <div class="p-3 rounded-xl bg-gradient-to-br from-blue-500 to-purple-500 shadow-lg">
+                    <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+                    </svg>
+                </div>
+                <div>
+                    <h1 class="text-4xl font-bold bg-gradient-to-r from-neutral-900 to-neutral-700 bg-clip-text text-transparent">
+                        物件管理
+                    </h1>
+                    <p class="text-neutral-600 mt-1">
+                        ポートフォリオの管理と分析
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Portfolio Summary -->
+        <div class="mb-10">
+            <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
+                <!-- Metric Card: 保有物件数 -->
+                <div class="relative overflow-hidden border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 rounded-lg bg-white">
+                    <div class="absolute inset-0 bg-gradient-to-br from-info-50 to-info-50 opacity-50"></div>
+                    <div class="relative p-6">
+                        <div class="flex items-start justify-between mb-4">
+                            <div class="p-3 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-500 shadow-md">
+                                <svg class="h-6 w-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
+                                </svg>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="text-3xl font-bold text-neutral-900 mb-1">3</div>
+                            <div class="text-sm font-medium text-neutral-600">保有物件数</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Metric Card: 総資産価値 -->
+                <div class="relative overflow-hidden border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 rounded-lg bg-white">
+                    <div class="absolute inset-0 bg-gradient-to-br from-success-50 to-success-50 opacity-50"></div>
+                    <div class="relative p-6">
+                        <div class="flex items-start justify-between mb-4">
+                            <div class="p-3 rounded-xl bg-gradient-to-br from-emerald-500 to-teal-500 shadow-md">
+                                <svg class="h-6 w-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="text-3xl font-bold text-neutral-900 mb-1">¥143,500,000</div>
+                            <div class="text-sm font-medium text-neutral-600">総資産価値</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Metric Card: 平均利回り -->
+                <div class="relative overflow-hidden border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 rounded-lg bg-white">
+                    <div class="absolute inset-0 bg-gradient-to-br from-secondary-50 to-secondary-50 opacity-50"></div>
+                    <div class="relative p-6">
+                        <div class="flex items-start justify-between mb-4">
+                            <div class="p-3 rounded-xl bg-gradient-to-br from-violet-500 to-purple-500 shadow-md">
+                                <svg class="h-6 w-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+                                </svg>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="text-3xl font-bold text-neutral-900 mb-1">6.5%</div>
+                            <div class="text-sm font-medium text-neutral-600">平均利回り</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Metric Card: 稼働率 -->
+                <div class="relative overflow-hidden border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 rounded-lg bg-white">
+                    <div class="absolute inset-0 bg-gradient-to-br from-warning-50 to-warning-50 opacity-50"></div>
+                    <div class="relative p-6">
+                        <div class="flex items-start justify-between mb-4">
+                            <div class="p-3 rounded-xl bg-gradient-to-br from-orange-500 to-amber-500 shadow-md">
+                                <svg class="h-6 w-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                                </svg>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="text-3xl font-bold text-neutral-900 mb-1">100.0%</div>
+                            <div class="text-sm font-medium text-neutral-600">稼働率</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Properties List -->
+        <div class="bg-white rounded-2xl shadow-xl p-6 border border-neutral-100">
+            <div class="mb-6 flex items-center justify-between">
+                <div>
+                    <h2 class="text-2xl font-bold text-neutral-900">物件一覧</h2>
+                    <p class="text-sm text-neutral-600 mt-1">3件の物件を管理中</p>
+                </div>
+            </div>
+
+            <div class="grid gap-6 sm:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3">
+                <!-- Property Card 1 -->
+                <div class="group relative overflow-hidden border border-neutral-200 hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 cursor-pointer rounded-lg bg-white">
+                    <!-- Image -->
+                    <div class="relative w-full h-48 bg-gradient-to-br from-blue-500/10 to-purple-500/10 flex items-center justify-center">
+                        <svg class="w-16 h-16 text-neutral-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                        </svg>
+                    </div>
+                    <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500"></div>
+
+                    <!-- Content -->
+                    <div class="p-4">
+                        <div class="pb-3">
+                            <div class="text-xl font-bold text-neutral-900 flex items-center gap-2">
+                                <div class="p-2 rounded-lg bg-gradient-to-br from-blue-500 to-purple-500 text-white">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
+                                    </svg>
+                                </div>
+                                グリーンハイツ西新宿
+                            </div>
+                        </div>
+
+                        <div class="space-y-4 pb-4">
+                            <div class="bg-gradient-to-br from-neutral-50 to-info-50 rounded-lg p-3 border border-neutral-200">
+                                <p class="text-xs font-semibold text-neutral-600 uppercase tracking-wide mb-1">住所</p>
+                                <p class="text-sm font-medium text-neutral-900">東京都新宿区西新宿3-7-1</p>
+                            </div>
+
+                            <div class="grid grid-cols-2 gap-3">
+                                <div class="bg-white rounded-lg p-3 border border-neutral-200 shadow-sm">
+                                    <p class="text-xs font-semibold text-neutral-600 uppercase tracking-wide mb-1">購入日</p>
+                                    <p class="text-sm font-bold text-neutral-900">2023年04月</p>
+                                </div>
+                                <div class="bg-white rounded-lg p-3 border border-neutral-200 shadow-sm">
+                                    <p class="text-xs font-semibold text-neutral-600 uppercase tracking-wide mb-1">購入価格</p>
+                                    <p class="text-sm font-bold text-info-600">¥52,000,000</p>
+                                </div>
+                            </div>
+
+                            <button class="w-full border border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white transition-colors py-2 px-4 rounded-lg font-medium flex items-center justify-center gap-2">
+                                詳細を見る
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Property Card 2 -->
+                <div class="group relative overflow-hidden border border-neutral-200 hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 cursor-pointer rounded-lg bg-white">
+                    <!-- Image -->
+                    <div class="relative w-full h-48 bg-gradient-to-br from-blue-500/10 to-purple-500/10 flex items-center justify-center">
+                        <svg class="w-16 h-16 text-neutral-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                        </svg>
+                    </div>
+                    <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500"></div>
+
+                    <!-- Content -->
+                    <div class="p-4">
+                        <div class="pb-3">
+                            <div class="text-xl font-bold text-neutral-900 flex items-center gap-2">
+                                <div class="p-2 rounded-lg bg-gradient-to-br from-blue-500 to-purple-500 text-white">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
+                                    </svg>
+                                </div>
+                                サンライズ渋谷
+                            </div>
+                        </div>
+
+                        <div class="space-y-4 pb-4">
+                            <div class="bg-gradient-to-br from-neutral-50 to-info-50 rounded-lg p-3 border border-neutral-200">
+                                <p class="text-xs font-semibold text-neutral-600 uppercase tracking-wide mb-1">住所</p>
+                                <p class="text-sm font-medium text-neutral-900">東京都渋谷区渋谷2-15-1</p>
+                            </div>
+
+                            <div class="grid grid-cols-2 gap-3">
+                                <div class="bg-white rounded-lg p-3 border border-neutral-200 shadow-sm">
+                                    <p class="text-xs font-semibold text-neutral-600 uppercase tracking-wide mb-1">購入日</p>
+                                    <p class="text-sm font-bold text-neutral-900">2022年09月</p>
+                                </div>
+                                <div class="bg-white rounded-lg p-3 border border-neutral-200 shadow-sm">
+                                    <p class="text-xs font-semibold text-neutral-600 uppercase tracking-wide mb-1">購入価格</p>
+                                    <p class="text-sm font-bold text-info-600">¥68,000,000</p>
+                                </div>
+                            </div>
+
+                            <button class="w-full border border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white transition-colors py-2 px-4 rounded-lg font-medium flex items-center justify-center gap-2">
+                                詳細を見る
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Property Card 3 -->
+                <div class="group relative overflow-hidden border border-neutral-200 hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 cursor-pointer rounded-lg bg-white">
+                    <!-- Image -->
+                    <div class="relative w-full h-48 bg-gradient-to-br from-blue-500/10 to-purple-500/10 flex items-center justify-center">
+                        <svg class="w-16 h-16 text-neutral-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                        </svg>
+                    </div>
+                    <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500"></div>
+
+                    <!-- Content -->
+                    <div class="p-4">
+                        <div class="pb-3">
+                            <div class="text-xl font-bold text-neutral-900 flex items-center gap-2">
+                                <div class="p-2 rounded-lg bg-gradient-to-br from-blue-500 to-purple-500 text-white">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
+                                    </svg>
+                                </div>
+                                メゾン六本木
+                            </div>
+                        </div>
+
+                        <div class="space-y-4 pb-4">
+                            <div class="bg-gradient-to-br from-neutral-50 to-info-50 rounded-lg p-3 border border-neutral-200">
+                                <p class="text-xs font-semibold text-neutral-600 uppercase tracking-wide mb-1">住所</p>
+                                <p class="text-sm font-medium text-neutral-900">東京都港区六本木6-12-4</p>
+                            </div>
+
+                            <div class="grid grid-cols-2 gap-3">
+                                <div class="bg-white rounded-lg p-3 border border-neutral-200 shadow-sm">
+                                    <p class="text-xs font-semibold text-neutral-600 uppercase tracking-wide mb-1">購入日</p>
+                                    <p class="text-sm font-bold text-neutral-900">2024年01月</p>
+                                </div>
+                                <div class="bg-white rounded-lg p-3 border border-neutral-200 shadow-sm">
+                                    <p class="text-xs font-semibold text-neutral-600 uppercase tracking-wide mb-1">購入価格</p>
+                                    <p class="text-sm font-bold text-info-600">¥23,500,000</p>
+                                </div>
+                            </div>
+
+                            <button class="w-full border border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white transition-colors py-2 px-4 rounded-lg font-medium flex items-center justify-center gap-2">
+                                詳細を見る
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="mt-8 text-center text-sm text-neutral-500">
+            <p>Optima 物件管理システム - デモページ</p>
+            <p class="mt-1">このページはログイン不要で閲覧できます</p>
+        </div>
+    </div>
+</body>
+</html>
+
