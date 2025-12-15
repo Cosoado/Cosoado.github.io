@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Over100 - 君は100を超えられるか？</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Outfit:wght@700&display=swap" rel="stylesheet">
+    <style>
+        /* Small sparkle animation */
+        @keyframes sparkle {
+            0%, 100% { opacity: 0; transform: scale(0); }
+            50% { opacity: 1; transform: scale(1); }
+        }
+        .sparkle {
+            position: absolute;
+            background: white;
+            border-radius: 50%;
+            pointer-events: none;
+            box-shadow: 0 0 10px white;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">限界を、<br>超えろ。</h1>
+                <p class="hero-subtitle">
+                    足し算と戦略が交差する、新感覚カードゲーム。<br>
+                    シンプルだけど奥深い。99の先にある世界へ。
+                </p>
+                <a href="#" class="cta-button">今すぐダウンロード</a>
+            </div>
+            <!-- Visual Element Placeholder (e.g., floating cards or phone mockup) -->
+            <!-- <div class="hero-visual"></div> -->
+        </div>
+    </header>
+
+    <!-- Features Section -->
+    <section class="section features">
+        <div class="container">
+            <h2 class="section-title">Why Over100?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon" style="color: var(--accent-pink);">⚡️</div>
+                    <h3 class="feature-title">瞬時の計算</h3>
+                    <p class="feature-description">
+                        直感的なUIで、計算のストレスゼロ。<br>
+                        ゲームの駆け引きだけに集中できる没入感。
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon" style="color: var(--accent-mint);">🧠</div>
+                    <h3 class="feature-title">心理戦</h3>
+                    <p class="feature-description">
+                        「スキップ」「リバース」...<br>
+                        特殊カードを駆使して、相手を追い詰めろ。
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon" style="color: var(--accent-purple);">🔥</div>
+                    <h3 class="feature-title">白熱のオンライン</h3>
+                    <p class="feature-description">
+                        友達とも、見知らぬ誰かとも。<br>
+                        リアルタイムで繋がる興奮。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="app-logo" style="font-weight: 700; font-size: 1.5rem; color: white;">Over100</div>
+                <div class="footer-links">
+                    <a href="terms.html" class="footer-link">利用規約</a>
+                    <a href="privacy.html" class="footer-link">プライバシーポリシー</a>
+                </div>
+                <div class="copyright" style="color: var(--text-secondary); font-size: 0.8rem;">
+                    &copy; 2025 Cosoado. All rights reserved.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple sparkle effect on mouse move
+        document.addEventListener('mousemove', (e) => {
+            if (Math.random() > 0.9) {
+                const sparkle = document.createElement('div');
+                sparkle.classList.add('sparkle');
+                sparkle.style.left = e.pageX + 'px';
+                sparkle.style.top = e.pageY + 'px';
+                sparkle.style.width = Math.random() * 5 + 'px';
+                sparkle.style.height = sparkle.style.width;
+                sparkle.style.animation = `sparkle 1s linear forwards`;
+                document.body.appendChild(sparkle);
+                setTimeout(() => sparkle.remove(), 1000);
+            }
+        });
+    </script>
+</body>
+</html>
