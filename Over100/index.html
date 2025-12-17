@@ -42,45 +42,46 @@
 
         .hero-visual {
             position: absolute;
-            top: 50%;
-            right: 10%;
-            /* Place to the right */
-            transform: translateY(-50%) rotateY(-20deg) rotateX(10deg);
+            top: 0;
+            right: 0;
+            width: 70%;
+            height: 100%;
             z-index: 0;
-            opacity: 0.3;
-            /* Faint background */
+            opacity: 0.15;
             pointer-events: none;
-            /* Non-interactive background */
             display: flex;
             justify-content: center;
+            align-items: center;
+            overflow: hidden;
         }
 
         .hero-image-container {
             position: relative;
             width: 100%;
-            max-width: 320px;
-            /* Adjust based on preference, phone width approx */
-            perspective: 1000px;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
         .hero-image {
-            width: 100%;
-            border-radius: 30px;
-            box-shadow:
-                0 0 0 8px rgba(255, 255, 255, 0.05),
-                0 30px 60px rgba(0, 0, 0, 0.4),
-                0 0 30px rgba(255, 0, 128, 0.2);
+            width: auto;
+            height: 120%;
+            box-shadow: none;
+            border-radius: 0;
+            transform: rotate(10deg) translateX(50px);
+            /* filter: grayscale(50%); */
         }
 
         @keyframes float {
 
             0%,
             100% {
-                transform: translateY(0) rotateY(-10deg) rotateX(5deg);
+                transform: rotate(10deg) translateX(50px) translateY(0);
             }
 
             50% {
-                transform: translateY(-20px) rotateY(-10deg) rotateX(5deg);
+                transform: rotate(10deg) translateX(50px) translateY(-20px);
             }
         }
 
@@ -95,12 +96,8 @@
             }
 
             .hero-visual {
-                right: 5%;
-                opacity: 0.4;
-            }
-
-            .hero-image-container {
-                max-width: 400px;
+                width: 60%;
+                opacity: 0.15;
             }
         }
     </style>
