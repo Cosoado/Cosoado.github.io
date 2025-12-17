@@ -35,10 +35,22 @@
         }
 
         /* Hero Image Styles */
-        .hero-visual {
-            margin-top: 3rem;
+        .hero {
             position: relative;
-            z-index: 10;
+            /* Ensure relative context for absolute children */
+        }
+
+        .hero-visual {
+            position: absolute;
+            top: 50%;
+            right: 10%;
+            /* Place to the right */
+            transform: translateY(-50%) rotateY(-20deg) rotateX(10deg);
+            z-index: 0;
+            opacity: 0.3;
+            /* Faint background */
+            pointer-events: none;
+            /* Non-interactive background */
             display: flex;
             justify-content: center;
         }
@@ -55,23 +67,9 @@
             width: 100%;
             border-radius: 30px;
             box-shadow:
-                0 0 0 8px rgba(255, 255, 255, 0.1),
-                /* Outer glow ring */
-                0 30px 60px rgba(0, 0, 0, 0.6),
-                /* Deep shadow */
-                0 0 30px rgba(255, 0, 128, 0.3);
-            /* Neon glow match */
-            transform: rotateY(-10deg) rotateX(5deg);
-            transition: transform 0.5s ease;
-            animation: float 6s ease-in-out infinite;
-        }
-
-        .hero-image:hover {
-            transform: rotateY(0) rotateX(0) scale(1.02);
-            box-shadow:
-                0 0 0 12px rgba(255, 255, 255, 0.2),
-                0 40px 80px rgba(0, 0, 0, 0.7),
-                0 0 50px rgba(255, 0, 128, 0.5);
+                0 0 0 8px rgba(255, 255, 255, 0.05),
+                0 30px 60px rgba(0, 0, 0, 0.4),
+                0 0 30px rgba(255, 0, 128, 0.2);
         }
 
         @keyframes float {
@@ -91,16 +89,34 @@
             .hero-content {
                 text-align: left;
                 margin-bottom: 0;
+                position: relative;
+                z-index: 10;
+                /* Ensure content is above image */
             }
 
             .hero-visual {
-                margin-top: 0;
-                margin-left: 4rem;
+                right: 5%;
+                opacity: 0.4;
             }
 
             .hero-image-container {
-                max-width: 350px;
+                max-width: 400px;
             }
+        }
+
+        .hero-content {
+            text-align: left;
+            margin-bottom: 0;
+        }
+
+        .hero-visual {
+            margin-top: 0;
+            margin-left: 4rem;
+        }
+
+        .hero-image-container {
+            max-width: 350px;
+        }
         }
     </style>
 </head>
