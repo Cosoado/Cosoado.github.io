@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,13 +8,24 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Outfit:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Outfit:wght@700&display=swap"
+        rel="stylesheet">
     <style>
         /* Small sparkle animation */
         @keyframes sparkle {
-            0%, 100% { opacity: 0; transform: scale(0); }
-            50% { opacity: 1; transform: scale(1); }
+
+            0%,
+            100% {
+                opacity: 0;
+                transform: scale(0);
+            }
+
+            50% {
+                opacity: 1;
+                transform: scale(1);
+            }
         }
+
         .sparkle {
             position: absolute;
             background: white;
@@ -21,8 +33,78 @@
             pointer-events: none;
             box-shadow: 0 0 10px white;
         }
+
+        /* Hero Image Styles */
+        .hero-visual {
+            margin-top: 3rem;
+            position: relative;
+            z-index: 10;
+            display: flex;
+            justify-content: center;
+        }
+
+        .hero-image-container {
+            position: relative;
+            width: 100%;
+            max-width: 320px;
+            /* Adjust based on preference, phone width approx */
+            perspective: 1000px;
+        }
+
+        .hero-image {
+            width: 100%;
+            border-radius: 30px;
+            box-shadow:
+                0 0 0 8px rgba(255, 255, 255, 0.1),
+                /* Outer glow ring */
+                0 30px 60px rgba(0, 0, 0, 0.6),
+                /* Deep shadow */
+                0 0 30px rgba(255, 0, 128, 0.3);
+            /* Neon glow match */
+            transform: rotateY(-10deg) rotateX(5deg);
+            transition: transform 0.5s ease;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .hero-image:hover {
+            transform: rotateY(0) rotateX(0) scale(1.02);
+            box-shadow:
+                0 0 0 12px rgba(255, 255, 255, 0.2),
+                0 40px 80px rgba(0, 0, 0, 0.7),
+                0 0 50px rgba(255, 0, 128, 0.5);
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0) rotateY(-10deg) rotateX(5deg);
+            }
+
+            50% {
+                transform: translateY(-20px) rotateY(-10deg) rotateX(5deg);
+            }
+        }
+
+        /* Mobile responsive adjustments */
+        @media (min-width: 768px) {
+            .hero-content {
+                text-align: left;
+                margin-bottom: 0;
+            }
+
+            .hero-visual {
+                margin-top: 0;
+                margin-left: 4rem;
+            }
+
+            .hero-image-container {
+                max-width: 350px;
+            }
+        }
     </style>
 </head>
+
 <body>
 
     <!-- Hero Section -->
@@ -37,7 +119,11 @@
                 <a href="#" class="cta-button">今すぐダウンロード</a>
             </div>
             <!-- Visual Element Placeholder (e.g., floating cards or phone mockup) -->
-            <!-- <div class="hero-visual"></div> -->
+            <div class="hero-visual">
+                <div class="hero-image-container">
+                    <img src="assets/images/gameplay.png" alt="Over100 Gameplay" class="hero-image">
+                </div>
+            </div>
         </div>
     </header>
 
@@ -107,4 +193,5 @@
         });
     </script>
 </body>
+
 </html>
