@@ -494,3 +494,18 @@ h3 {
     text-decoration-color: rgba(212, 175, 55, 0.3);
     text-underline-offset: 4px;
 }
+
+/* Feature Images */
+.feature-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+/* Visual Container clean up - remove background if needed, keeping dimensions */
+.feature-visual {
+    background: transparent !important; /* Override previous placeholder bg */
+    border: none;
+    box-shadow: none;
+}
