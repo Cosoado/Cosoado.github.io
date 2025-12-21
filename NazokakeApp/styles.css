@@ -473,3 +473,24 @@ h3 {
         flex-direction: column;
     }
 }
+/* Example Box Styling */
+.example-box {
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.example-title {
+    text-align: center;
+    color: var(--accent-color);
+    font-size: 0.9rem;
+    letter-spacing: 0.2rem;
+    margin-bottom: 2rem;
+    opacity: 0.7;
+}
+.highlight {
+    color: var(--accent-color);
+    font-weight: 700;
+    text-decoration: underline;
+    text-decoration-color: rgba(212, 175, 55, 0.3);
+    text-underline-offset: 4px;
+}
