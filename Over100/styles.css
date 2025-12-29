@@ -3,21 +3,21 @@
     --primary: #1E3A5F;
     --primary-light: #2D4A75;
     --primary-dark: #0F2438;
-    
+
     --accent-pink: #FF10F0;
     --accent-mint: #00FFAA;
     --accent-purple: #6B46C1;
     --accent-lime: #39FF14;
-    
+
     --bg-dark: #0F1B2E;
     --bg-surface: #1E3A5F;
-    
+
     --text-main: #E8ECF1;
     --text-secondary: #B8C5D4;
-    
+
     --glow-pink: rgba(255, 16, 240, 0.6);
     --glow-mint: rgba(0, 255, 170, 0.6);
-    
+
     --font-heading: 'Outfit', 'Inter', sans-serif;
     --font-body: 'Inter', sans-serif;
 }
@@ -37,7 +37,12 @@ body {
 }
 
 /* Typography */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: var(--font-heading);
     font-weight: 700;
     line-height: 1.2;
@@ -110,7 +115,7 @@ a {
     background: linear-gradient(to right, #fff, #B8C5D4);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    text-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    text-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
 .hero-subtitle {
@@ -193,7 +198,7 @@ a {
 /* Footer & Legal */
 footer {
     padding: 4rem 0;
-    border-top: 1px solid rgba(255,255,255,0.05);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
     background: var(--bg-dark);
 }
 
@@ -208,7 +213,8 @@ footer {
 /* Download Buttons */
 .download-buttons {
     display: flex;
-    gap: 1rem;
+    gap: 1.5rem;
+    /* Increased gap */
     margin-top: 2rem;
     flex-wrap: wrap;
 }
@@ -216,27 +222,50 @@ footer {
 .store-button {
     display: inline-flex;
     align-items: center;
-    gap: 0.5rem;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
+    gap: 0.8rem;
+    background: #000000;
+    /* Standard black background */
     border: 1px solid rgba(255, 255, 255, 0.2);
-    padding: 0.8rem 1.5rem;
-    border-radius: 50px;
+    padding: 0.5rem 1.2rem;
+    border-radius: 12px;
+    /* Standard badge radius */
     color: white;
     text-decoration: none;
-    font-weight: 600;
     transition: all 0.3s ease;
+    min-width: 160px;
 }
 
 .store-button:hover {
-    background: rgba(255, 255, 255, 0.2);
+    background: #333333;
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    border-color: rgba(255, 255, 255, 0.4);
 }
 
-.store-button svg {
-    width: 20px;
-    height: 20px;
+.store-icon {
+    flex-shrink: 0;
+}
+
+.store-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    line-height: 1.2;
+}
+
+.small-text {
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    opacity: 0.9;
+    font-weight: 500;
+}
+
+.large-text {
+    font-size: 1.1rem;
+    font-weight: 700;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    /* Standard system font for authenticity */
+    letter-spacing: 0.5px;
 }
 
 /* Footer Helpers */
@@ -293,9 +322,11 @@ footer {
     .hero-title {
         font-size: 3rem;
     }
+
     .section {
         padding: 4rem 0;
     }
+
     .footer-content {
         flex-direction: column;
         text-align: center;
