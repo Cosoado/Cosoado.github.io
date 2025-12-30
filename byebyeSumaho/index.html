@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ByeByeスマホ - スクリーンタイム削減アプリ</title>
+    <title>ByeByeスマホ - スクリーンタイム削減アプリ | Cosoado Lab</title>
     <meta name="description" content="ByeByeスマホは、スクリーンタイムを監視してスマホ時間を効率的に削減するアプリです。">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -333,6 +335,7 @@
                 opacity: 0;
                 transform: translateY(30px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -352,12 +355,13 @@
         }
     </style>
 </head>
+
 <body>
     <!-- ナビゲーション -->
     <nav>
         <div class="container">
             <div class="nav-container">
-                <div class="logo">ByeByeスマホ</div>
+                <div class="logo"><a href="/" style="text-decoration:none; color:inherit;">Cosoado Lab</a></div>
                 <ul class="nav-links">
                     <li><a href="#home">ホーム</a></li>
                     <li><a href="#features">機能</a></li>
@@ -484,7 +488,7 @@
                     <p><a href="#">Facebook</a></p>
                 </div>
             </div>
-            <p>&copy; 2024 ByeByeスマホ. All rights reserved.</p>
+            <p>&copy; 2025 Cosoado Lab. All rights reserved.</p>
         </div>
     </footer>
 
@@ -504,7 +508,7 @@
         });
 
         // ナビゲーションのスクロール効果
-        window.addEventListener('scroll', function() {
+        window.addEventListener('scroll', function () {
             const nav = document.querySelector('nav');
             if (window.scrollY > 100) {
                 nav.style.background = 'rgba(255, 255, 255, 0.98)';
@@ -523,7 +527,7 @@
                         const text = target.textContent;
                         const number = parseInt(text.replace(/[^0-9]/g, ''));
                         const suffix = text.replace(/[0-9]/g, '');
-                        
+
                         let current = 0;
                         const increment = number / 50;
                         const timer = setInterval(() => {
@@ -534,19 +538,20 @@
                             }
                             target.textContent = Math.floor(current) + suffix;
                         }, 30);
-                        
+
                         observer.unobserve(target);
                     }
                 });
             });
-            
+
             stats.forEach(stat => observer.observe(stat));
         }
 
         // ページ読み込み後に実行
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             animateNumbers();
         });
     </script>
 </body>
+
 </html>

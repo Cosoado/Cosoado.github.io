@@ -1,13 +1,125 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>ToPic Up 公式ページ</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosoado Lab | Innovation & Design</title>
+    <meta name="description" content="Cosoado Lab - 創造性を刺激するアプリケーション開発ラボ。Nazokake、OshiVistaなどを提供。">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Outfit:wght@500;700&display=swap" rel="stylesheet">
+    
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "url": "https://cosoado-lab.com",
+      "name": "Cosoado Lab",
+      "description": "App Development Laboratory"
+    }
+    </script>
 </head>
 <body>
-  <p>このページはToPic Upの公式ページです</p>
+
+    <header class="header">
+        <div class="container" style="display: flex; justify-content: space-between; width: 100%;">
+            <a href="#" class="logo">Cosoado Lab</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1 class="hero-title">
+                    Digital Craftsmanship
+                    <span>from the Lab.</span>
+                </h1>
+                <p class="hero-subtitle">
+                    私たちは、テクノロジーとデザインの融合を探求する実験室です。<br>
+                    日常に少しの驚きと、洗練された体験を。
+                </p>
+                <a href="#projects" class="hero-cta">View Projects</a>
+            </div>
+        </section>
+
+        <section id="projects" class="portfolio">
+            <div class="container">
+                <h2 class="section-title">Featured Projects</h2>
+                <div class="grid">
+                    
+                    <!-- Nazokake Maker -->
+                    <article class="card">
+                        <div class="card-image-placeholder">N</div>
+                        <div class="card-content">
+                            <h3 class="card-title">謎かけメーカー</h3>
+                            <p class="card-desc">AIと競う、言葉のアート。洗練された和のデザインで楽しむ、新しい謎かけ体験。</p>
+                            <a href="/NazokakeApp/" class="card-link">Explore →</a>
+                        </div>
+                    </article>
+
+                    <!-- OshiVista -->
+                    <article class="card">
+                        <div class="card-image-placeholder">O</div>
+                        <div class="card-content">
+                            <h3 class="card-title">OshiVista</h3>
+                            <p class="card-desc">あなたの「推し」活動を最大限にサポートするビジュアル重視のプラットフォーム。</p>
+                            <a href="/OshiVista/" class="card-link">Explore →</a>
+                        </div>
+                    </article>
+
+                    <!-- Over100 -->
+                    <article class="card">
+                        <div class="card-image-placeholder">100</div>
+                        <div class="card-content">
+                            <h3 class="card-title">Over100</h3>
+                            <p class="card-desc">限界を超えるためのツール。あなたのポテンシャルを解放します。</p>
+                            <a href="/Over100/" class="card-link">Explore →</a>
+                        </div>
+                    </article>
+
+                    <!-- OmakaseMaster -->
+                    <article class="card">
+                        <div class="card-image-placeholder">M</div>
+                        <div class="card-content">
+                            <h3 class="card-title">Omakase Master</h3>
+                            <p class="card-desc">迷った時の強い味方。AIが最適な選択を提案します。</p>
+                            <a href="/OmakaseMaster/" class="card-link">Explore →</a>
+                        </div>
+                    </article>
+
+                     <!-- ByeByeSumaho -->
+                     <article class="card">
+                        <div class="card-image-placeholder">B</div>
+                        <div class="card-content">
+                            <h3 class="card-title">ByeByeスマホ</h3>
+                            <p class="card-desc">デジタルデトックスをサポート。スマホとの健全な距離感を。</p>
+                            <a href="/byebyeSumaho/" class="card-link">Explore →</a>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Cosoado Lab. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Simple smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
 </html>
-
-
