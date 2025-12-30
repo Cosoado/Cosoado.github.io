@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,8 +9,10 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Outfit:wght@500;700&display=swap" rel="stylesheet">
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700&family=Zen+Kaku+Gothic+New:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+
     <!-- JSON-LD Structured Data -->
     <script type="application/ld+json">
     {
@@ -21,7 +24,15 @@
     }
     </script>
 </head>
+
 <body>
+    <div class="fluid-bg">
+        <div class="blob"></div>
+        <div class="blob"></div>
+        <div class="blob"></div>
+    </div>
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
 
     <header class="header">
         <div class="container" style="display: flex; justify-content: space-between; width: 100%;">
@@ -48,7 +59,7 @@
             <div class="container">
                 <h2 class="section-title">Featured Projects</h2>
                 <div class="grid">
-                    
+
                     <!-- Nazokake Maker -->
                     <article class="card">
                         <div class="card-image-placeholder">N</div>
@@ -89,8 +100,8 @@
                         </div>
                     </article>
 
-                     <!-- ByeByeSumaho -->
-                     <article class="card">
+                    <!-- ByeByeSumaho -->
+                    <article class="card">
                         <div class="card-image-placeholder">B</div>
                         <div class="card-content">
                             <h3 class="card-title">ByeByeスマホ</h3>
@@ -121,5 +132,7 @@
             });
         });
     </script>
+    <script src="script.js"></script>
 </body>
+
 </html>
