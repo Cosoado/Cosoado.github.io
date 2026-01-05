@@ -68,7 +68,7 @@
                         NOTE: Replace 'YOUR_FORM_ID' with your actual Formspree ID.
                         Register at https://formspree.io/ to get one.
                     -->
-                    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="contact-form">
+                    <form id="contact-form" method="POST" class="contact-form">
                         <div class="form-group">
                             <label for="name" class="form-label">Name</label>
                             <input type="text" id="name" name="name" class="form-input" required placeholder="お名前">
@@ -112,6 +112,11 @@
 
     <script src="../script.js"></script>
     <script>
+        // Form Action Injection (Security Obfuscation)
+        const contactForm = document.getElementById('contact-form');
+        const formId = "xjgklleb"; // Formspree ID
+        contactForm.setAttribute("action", "https://formspree.io/f/" + formId);
+
         // Form Validation Script
         const emailInput = document.getElementById('email');
         const emailError = document.getElementById('email-error');
