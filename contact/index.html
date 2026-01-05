@@ -64,11 +64,7 @@
 
                 <!-- Contact Form -->
                 <div class="contact-card glass-panel">
-                    <!-- 
-                        NOTE: Replace 'YOUR_FORM_ID' with your actual Formspree ID.
-                        Register at https://formspree.io/ to get one.
-                    -->
-                    <form id="contact-form" method="POST" class="contact-form">
+                    <form id="contact-form" action="https://formspree.io/f/xjgklleb" method="POST" class="contact-form">
                         <div class="form-group">
                             <label for="name" class="form-label">Name</label>
                             <input type="text" id="name" name="name" class="form-input" required placeholder="お名前">
@@ -114,16 +110,10 @@
 
     <script src="../script.js"></script>
     <script>
-        // Form Action Injection (Security Obfuscation)
-        const contactForm = document.getElementById('contact-form');
-        const formId = "xjgklleb"; // Formspree ID
-        contactForm.setAttribute("action", "https://formspree.io/f/" + formId);
-
         // Form Validation Script
         const emailInput = document.getElementById('email');
         const emailError = document.getElementById('email-error');
-        const form = document.querySelector('.contact-form');
-        const submitBtn = document.getElementById('submit-btn');
+        const form = document.getElementById('contact-form');
 
         const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
 
@@ -147,10 +137,9 @@
             if (emailError.textContent) validateEmail();
         });
 
-        form.addEventListener('submit', async function (e) {
-            e.preventDefault();
+        form.addEventListener('submit', function (e) {
             if (!validateEmail()) {
-                // Shake animation or focus
+                e.preventDefault();
                 emailInput.focus();
                 emailInput.style.borderColor = '#ff6b6b';
                 setTimeout(() => {
@@ -158,51 +147,7 @@
                 }, 2000);
                 return;
             }
-
-            const status = document.getElementById('form-status');
-            const data = new FormData(e.target);
-            const action = e.target.action;
-
-            // Loading state
-            submitBtn.disabled = true;
-            submitBtn.textContent = 'Sending...';
-
-            try {
-                const response = await fetch(action, {
-                    method: form.method,
-                    body: data,
-                    headers: {
-                        'Accept': 'application/json'
-                    }
-                });
-
-                if (response.ok) {
-                    status.innerHTML = "お問い合わせありがとうございます。<br>メッセージが送信されました。";
-                    status.className = "form-status success";
-                    status.style.display = "block";
-                    form.reset(); // Clear form
-                } else {
-                    const jsonData = await response.json();
-                    let errorMsg = "送信に失敗しました。もう一度お試しください。";
-
-                    if (jsonData.errors) {
-                        // Extract first error message if available
-                        errorMsg = jsonData.errors.map(error => error.message).join(", ");
-                    }
-
-                    status.innerHTML = errorMsg;
-                    status.className = "form-status error";
-                    status.style.display = "block";
-                }
-            } catch (error) {
-                status.innerHTML = "エラーが発生しました。インターネット接続を確認してください。";
-                status.className = "form-status error";
-                status.style.display = "block";
-            } finally {
-                // Reset button
-                submitBtn.disabled = false;
-                submitBtn.innerHTML = 'Send Message <span class="btn-icon">→</span>';
-            }
+            // フォームは通常通りFormspreeへ送信される
         });
     </script>
 </body>
