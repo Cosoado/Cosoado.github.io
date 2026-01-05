@@ -150,6 +150,11 @@
             // フォームは通常通りFormspreeへ送信される
         });
 
+        // Formspreeから遷移してきた場合（「サイトへ戻る」リンク経由）にフォームをクリア
+        if (document.referrer && document.referrer.includes('formspree.io')) {
+            form.reset();
+        }
+
         // ブラウザの戻るボタンでFormspreeから戻った時にフォームをクリア
         window.addEventListener('pageshow', function (event) {
             if (event.persisted) {
