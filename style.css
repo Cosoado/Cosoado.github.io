@@ -187,6 +187,10 @@ h3 {
     object-fit: contain;
 }
 
+.logo-text {
+    margin-left: 10px;
+}
+
 /* Hero Section */
 .hero {
     height: 100vh;
