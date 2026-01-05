@@ -64,28 +64,35 @@
 
                 <!-- Contact Form -->
                 <div class="contact-card glass-panel">
-                    <form id="contact-form" action="https://formspree.io/f/xjgklleb" method="POST" class="contact-form">
+                    <!-- Form action is set dynamically via JavaScript for security -->
+                    <form id="contact-form" method="POST" class="contact-form">
+                        <!-- Honeypot field for spam bot detection (hidden from users) -->
+                        <input type="text" name="_gotcha" style="display:none !important" tabindex="-1"
+                            autocomplete="off">
+
                         <div class="form-group">
                             <label for="name" class="form-label">Name</label>
-                            <input type="text" id="name" name="name" class="form-input" required placeholder="お名前">
+                            <input type="text" id="name" name="name" class="form-input" required placeholder="お名前"
+                                maxlength="100">
                         </div>
 
                         <div class="form-group">
                             <label for="email" class="form-label">Email</label>
                             <input type="email" id="email" name="email" class="form-input" required
-                                placeholder="メールアドレス">
+                                placeholder="メールアドレス" maxlength="254">
                             <span id="email-error" class="form-error"></span>
                         </div>
 
                         <div class="form-group">
                             <label for="subject" class="form-label">Subject</label>
-                            <input type="text" id="subject" name="subject" class="form-input" required placeholder="件名">
+                            <input type="text" id="subject" name="subject" class="form-input" required placeholder="件名"
+                                maxlength="200">
                         </div>
 
                         <div class="form-group">
                             <label for="message" class="form-label">Message</label>
-                            <textarea id="message" name="message" class="form-textarea" required
-                                placeholder="お問い合わせ内容"></textarea>
+                            <textarea id="message" name="message" class="form-textarea" required placeholder="お問い合わせ内容"
+                                maxlength="5000"></textarea>
                         </div>
 
                         <div id="form-status" class="form-status"></div>
@@ -110,58 +117,95 @@
 
     <script src="../script.js"></script>
     <script>
-        // Form Validation Script
-        const emailInput = document.getElementById('email');
-        const emailError = document.getElementById('email-error');
-        const form = document.getElementById('contact-form');
+        // Security: Form endpoint obfuscation
+        (function () {
+            const form = document.getElementById('contact-form');
+            const emailInput = document.getElementById('email');
+            const emailError = document.getElementById('email-error');
 
-        const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+            // Obfuscated form endpoint (Base64 encoded and split)
+            const _0x1 = 'aHR0cHM6Ly9mb3Jtc3ByZWUu';
+            const _0x2 = 'aW8vZi94amdr';
+            const _0x3 = 'bGxlYg==';
+            const _d = function (s) { return atob(s); };
 
-        function validateEmail() {
-            if (!emailInput.value.match(emailPattern)) {
-                emailError.textContent = '有効なメールアドレスを入力してください';
-                emailError.style.display = 'block';
-                return false;
-            } else {
-                emailError.textContent = '';
-                emailError.style.display = 'none';
+            // Set form action dynamically
+            form.setAttribute('action', _d(_0x1) + _d(_0x2) + _d(_0x3));
+
+            const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+
+            // Input sanitization function
+            function sanitizeInput(str) {
+                const div = document.createElement('div');
+                div.textContent = str;
+                return div.innerHTML;
+            }
+
+            function validateEmail() {
+                if (!emailInput.value.match(emailPattern)) {
+                    emailError.textContent = '有効なメールアドレスを入力してください';
+                    emailError.style.display = 'block';
+                    return false;
+                } else {
+                    emailError.textContent = '';
+                    emailError.style.display = 'none';
+                    return true;
+                }
+            }
+
+            // Validate all inputs
+            function validateAllInputs() {
+                const name = document.getElementById('name').value;
+                const subject = document.getElementById('subject').value;
+                const message = document.getElementById('message').value;
+
+                // Check for suspicious patterns (potential injection)
+                const suspiciousPattern = /<script|javascript:|data:/i;
+                if (suspiciousPattern.test(name) || suspiciousPattern.test(subject) || suspiciousPattern.test(message)) {
+                    return false;
+                }
                 return true;
             }
-        }
 
-        emailInput.addEventListener('blur', function () {
-            if (this.value) validateEmail();
-        });
+            emailInput.addEventListener('blur', function () {
+                if (this.value) validateEmail();
+            });
 
-        emailInput.addEventListener('input', function () {
-            if (emailError.textContent) validateEmail();
-        });
+            emailInput.addEventListener('input', function () {
+                if (emailError.textContent) validateEmail();
+            });
 
-        form.addEventListener('submit', function (e) {
-            if (!validateEmail()) {
-                e.preventDefault();
-                emailInput.focus();
-                emailInput.style.borderColor = '#ff6b6b';
-                setTimeout(() => {
-                    emailInput.style.borderColor = 'rgba(255, 255, 255, 0.1)';
-                }, 2000);
-                return;
-            }
-            // フォームは通常通りFormspreeへ送信される
-        });
+            form.addEventListener('submit', function (e) {
+                // Honeypot check
+                const honeypot = form.querySelector('input[name="_gotcha"]');
+                if (honeypot && honeypot.value) {
+                    e.preventDefault();
+                    return;
+                }
 
-        // Formspreeから遷移してきた場合（「サイトへ戻る」リンク経由）にフォームをクリア
-        if (document.referrer && document.referrer.includes('formspree.io')) {
-            form.reset();
-        }
+                if (!validateEmail() || !validateAllInputs()) {
+                    e.preventDefault();
+                    emailInput.focus();
+                    emailInput.style.borderColor = '#ff6b6b';
+                    setTimeout(() => {
+                        emailInput.style.borderColor = 'rgba(255, 255, 255, 0.1)';
+                    }, 2000);
+                    return;
+                }
+            });
 
-        // ブラウザの戻るボタンでFormspreeから戻った時にフォームをクリア
-        window.addEventListener('pageshow', function (event) {
-            if (event.persisted) {
-                // bfcache（Back-Forward Cache）から復元された場合
+            // Clear form when returning from Formspree
+            if (document.referrer && document.referrer.includes(_d('Zm9ybXNwcmVl'))) {
                 form.reset();
             }
-        });
+
+            // Clear form on browser back button
+            window.addEventListener('pageshow', function (event) {
+                if (event.persisted) {
+                    form.reset();
+                }
+            });
+        })();
     </script>
 </body>
 
