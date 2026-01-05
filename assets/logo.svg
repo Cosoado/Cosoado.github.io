@@ -1,0 +1,36 @@
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00f3ff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#bc13fe;stop-opacity:1" />
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="15" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Main Group with Gradient Stroke and Glow -->
+  <g stroke="url(#grad1)" stroke-width="20" fill="none" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)">
+    
+    <!-- Outer Hexagon representing Board Games / Structure -->
+    <path d="M256 50 L450 162 V350 L256 462 L62 350 V162 Z" />
+
+    <!-- Inner Cube/Box representing The "Lab" or Core Logic -->
+    <path d="M256 220 L350 274 V382 L256 436 L162 382 V274 Z" stroke-opacity="0.8" />
+    
+    <!-- Connecting Circuit Lines representing Tech/EA -->
+    <path d="M256 50 V220" /> <!-- Top vertical -->
+    <path d="M450 162 L350 274" /> <!-- Top right diagonal -->
+    <path d="M450 350 L350 382" /> <!-- Bottom right connection -->
+    <path d="M62 350 L162 382" /> <!-- Bottom left connection -->
+    <path d="M62 162 L162 274" /> <!-- Top left diagonal -->
+    <path d="M256 462 V436" /> <!-- Bottom vertical short -->
+
+    <!-- Decorate Nodes (Creative Sparks) -->
+    <circle cx="256" cy="220" r="15" fill="url(#grad1)" stroke="none" />
+    <circle cx="350" cy="274" r="10" fill="url(#grad1)" stroke="none" />
+    <circle cx="162" cy="274" r="10" fill="url(#grad1)" stroke="none" />
+    
+  </g>
+</svg>
