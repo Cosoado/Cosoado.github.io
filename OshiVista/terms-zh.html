@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-Hans">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,19 +11,22 @@
             padding: 0;
             box-sizing: border-box;
         }
+
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif;
             line-height: 1.8;
             color: #333;
             background: #f5f5f5;
         }
+
         .container {
             max-width: 900px;
             margin: 0 auto;
             padding: 20px;
             background: white;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
+
         header {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
@@ -30,14 +34,17 @@
             text-align: center;
             margin: -20px -20px 40px -20px;
         }
+
         h1 {
             font-size: 2em;
             margin-bottom: 10px;
         }
+
         .last-updated {
             font-size: 0.9em;
             opacity: 0.9;
         }
+
         h2 {
             color: #667eea;
             margin: 40px 0 20px 0;
@@ -45,30 +52,38 @@
             border-bottom: 2px solid #667eea;
             font-size: 1.5em;
         }
+
         h3 {
             color: #764ba2;
             margin: 30px 0 15px 0;
             font-size: 1.2em;
         }
-        p, li {
+
+        p,
+        li {
             margin-bottom: 15px;
         }
-        ul, ol {
+
+        ul,
+        ol {
             margin-left: 30px;
             margin-bottom: 20px;
         }
+
         .important {
             background: #fff3cd;
             border-left: 4px solid #ffc107;
             padding: 15px;
             margin: 20px 0;
         }
+
         .contact {
             background: #e7f3ff;
             border-left: 4px solid #2196F3;
             padding: 15px;
             margin: 30px 0;
         }
+
         footer {
             text-align: center;
             margin-top: 60px;
@@ -76,17 +91,21 @@
             color: #666;
             font-size: 0.9em;
         }
+
         a {
             color: #667eea;
             text-decoration: none;
         }
+
         a:hover {
             text-decoration: underline;
         }
+
         .nav-links {
             text-align: center;
             margin: 30px 0;
         }
+
         .nav-links a {
             margin: 0 15px;
             padding: 10px 20px;
@@ -95,10 +114,12 @@
             border-radius: 5px;
             display: inline-block;
         }
+
         .nav-links a:hover {
             background: #764ba2;
             text-decoration: none;
         }
+
         .language-switcher {
             position: fixed;
             top: 20px;
@@ -107,10 +128,11 @@
             background: white;
             padding: 10px;
             border-radius: 25px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
             display: flex;
             gap: 5px;
         }
+
         .lang-btn {
             padding: 8px 15px;
             border: 2px solid #667eea;
@@ -123,20 +145,24 @@
             transition: all 0.3s;
             cursor: pointer;
         }
+
         .lang-btn:hover {
             background: #667eea;
             color: white;
         }
+
         .lang-btn.active {
             background: #667eea;
             color: white;
         }
+
         @media (max-width: 768px) {
             .language-switcher {
                 top: 10px;
                 right: 10px;
                 padding: 8px;
             }
+
             .lang-btn {
                 padding: 6px 10px;
                 font-size: 0.8em;
@@ -144,12 +170,13 @@
         }
     </style>
 </head>
+
 <body>
     <div class="language-switcher">
         <a href="terms" class="lang-btn">日本語</a>
-        <a href="terms-en.html" class="lang-btn">English</a>
-        <a href="terms-zh.html" class="lang-btn active">中文</a>
-        <a href="terms-ko.html" class="lang-btn">한국어</a>
+        <a href="terms-en" class="lang-btn">English</a>
+        <a href="terms-zh" class="lang-btn active">中文</a>
+        <a href="terms-ko" class="lang-btn">한국어</a>
     </div>
 
     <div class="container">
@@ -159,8 +186,8 @@
         </header>
 
         <div class="nav-links">
-            <a href="/">首页</a>
-            <a href="privacy">隐私政策</a>
+            <a href="index-zh">首页</a>
+            <a href="privacy-zh">隐私政策</a>
         </div>
 
         <section>
@@ -293,7 +320,8 @@
             <ol>
                 <li>我方不明示或默示保证本应用在事实上或法律上没有瑕疵（包括但不限于安全性、可靠性、准确性、完整性、有效性、适合特定目的、安全性方面的缺陷、错误或漏洞、侵权等）。</li>
                 <li>对于因使用本应用给用户造成的任何损害（包括但不限于用户数据丢失、设备故障及其他有形或无形损害），除我方故意或重大过失的情况外，我方不承担任何赔偿责任。</li>
-                <li>我方不对本应用中提供的推广对象相关信息（活动信息、官方网站信息等）的准确性、时效性、实用性作任何保证。这些信息是利用AI技术和外部服务获取的，可能包含错误或过时的信息。用户应在官方网站等处确认重要信息。</li>
+                <li>我方不对本应用中提供的推广对象相关信息（活动信息、官方网站信息等）的准确性、时效性、实用性作任何保证。这些信息是利用AI技术和外部服务获取的，可能包含错误或过时的信息。用户应在官方网站等处确认重要信息。
+                </li>
                 <li>我方对因本应用引起的用户与其他用户或第三方之间的交易、联系、纠纷等不承担任何责任。</li>
                 <li>我方不保证本应用在所有设备上正常运行，或在所有操作系统环境中可用。</li>
                 <li>对于用户通过使用本应用收集和使用推广对象信息的行为，我方不参与，也不承担任何责任。用户在收集和使用推广对象信息时，应遵守相关法律法规，不侵犯该推广对象的权利。</li>
@@ -343,7 +371,7 @@
 
         <section>
             <h2>第13条（个人信息的处理）</h2>
-            <p>我方将根据我方另行制定的"<a href="privacy">隐私政策</a>"，妥善处理通过使用本应用获取的个人信息。</p>
+            <p>我方将根据我方另行制定的"<a href="privacy-zh">隐私政策</a>"，妥善处理通过使用本应用获取s的个人信息。</p>
         </section>
 
         <section>
@@ -375,13 +403,16 @@
         <div class="contact">
             <h2>第18条（咨询）</h2>
             <p>有关本条款的咨询，请通过本应用内的咨询表单或以下咨询表单进行。</p>
-            <p><strong>咨询表单：</strong> <a href="https://docs.google.com/forms/d/1vS7MhblfiWDvx1n9BW3EEZfpoiMmvcikZZDcYGV6wDQ/viewform" target="_blank">点击此处咨询</a></p>
+            <p><strong>咨询表单：</strong> <a
+                    href="https://docs.google.com/forms/d/1vS7MhblfiWDvx1n9BW3EEZfpoiMmvcikZZDcYGV6wDQ/viewform"
+                    target="_blank">点击此处咨询</a></p>
         </div>
 
         <footer>
             <p>&copy; 2025 OshiVista. All rights reserved.</p>
-            <p><a href="/">首页</a> | <a href="terms">服务条款</a> | <a href="privacy">隐私政策</a></p>
+            <p><a href="index-zh">首页</a> | <a href="terms-zh">服务条款</a> | <a href="privacy-zh">隐私政策</a></p>
         </footer>
     </div>
 </body>
+
 </html>

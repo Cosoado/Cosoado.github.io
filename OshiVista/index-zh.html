@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-Hans">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,40 +12,47 @@
             padding: 0;
             box-sizing: border-box;
         }
+
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif;
             line-height: 1.8;
             color: #333;
             background: #f5f5f5;
         }
+
         .hero {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
             padding: 80px 20px;
             text-align: center;
         }
+
         .hero h1 {
             font-size: 3em;
             margin-bottom: 20px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
         }
+
         .hero p {
             font-size: 1.3em;
             margin-bottom: 10px;
             opacity: 0.95;
         }
+
         .container {
             max-width: 1000px;
             margin: 0 auto;
             padding: 40px 20px;
         }
+
         .section {
             background: white;
             padding: 40px;
             margin-bottom: 30px;
             border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
+
         h2 {
             color: #667eea;
             margin-bottom: 25px;
@@ -52,32 +60,38 @@
             border-bottom: 3px solid #667eea;
             font-size: 2em;
         }
+
         h3 {
             color: #764ba2;
             margin: 25px 0 15px 0;
             font-size: 1.4em;
         }
+
         .features {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 25px;
             margin: 30px 0;
         }
+
         .feature {
             background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
             padding: 25px;
             border-radius: 10px;
             text-align: center;
         }
+
         .feature-icon {
             font-size: 3em;
             margin-bottom: 15px;
         }
+
         .feature h3 {
             color: #667eea;
             margin: 15px 0;
             font-size: 1.2em;
         }
+
         .cta-buttons {
             display: flex;
             justify-content: center;
@@ -85,6 +99,7 @@
             margin: 40px 0;
             flex-wrap: wrap;
         }
+
         .cta-button {
             padding: 15px 40px;
             font-size: 1.2em;
@@ -93,25 +108,30 @@
             transition: all 0.3s;
             display: inline-block;
         }
+
         .cta-primary {
             background: #667eea;
             color: white;
         }
+
         .cta-primary:hover {
             background: #764ba2;
             transform: translateY(-2px);
             box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
         }
+
         .cta-secondary {
             background: white;
             color: #667eea;
             border: 2px solid #667eea;
         }
+
         .cta-secondary:hover {
             background: #667eea;
             color: white;
             transform: translateY(-2px);
         }
+
         .info-box {
             background: #e8f5e9;
             border-left: 4px solid #4caf50;
@@ -119,6 +139,7 @@
             margin: 25px 0;
             border-radius: 5px;
         }
+
         .warning-box {
             background: #fff3cd;
             border-left: 4px solid #ffc107;
@@ -126,12 +147,15 @@
             margin: 25px 0;
             border-radius: 5px;
         }
+
         ul {
             margin: 20px 0 20px 30px;
         }
+
         li {
             margin-bottom: 12px;
         }
+
         footer {
             background: #2c3e50;
             color: white;
@@ -139,23 +163,28 @@
             padding: 40px 20px;
             margin-top: 50px;
         }
+
         footer a {
-            color: #67eea;
+            color: #667eea;
             text-decoration: none;
             margin: 0 15px;
         }
+
         footer a:hover {
             text-decoration: underline;
         }
+
         .footer-links {
             margin: 20px 0;
             font-size: 1.1em;
         }
+
         .copyright {
             margin-top: 30px;
             opacity: 0.8;
             font-size: 0.9em;
         }
+
         .language-switcher {
             position: fixed;
             top: 20px;
@@ -164,10 +193,11 @@
             background: white;
             padding: 10px;
             border-radius: 25px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
             display: flex;
             gap: 5px;
         }
+
         .lang-btn {
             padding: 8px 15px;
             border: 2px solid #667eea;
@@ -180,37 +210,46 @@
             transition: all 0.3s;
             cursor: pointer;
         }
+
         .lang-btn:hover {
             background: #667eea;
             color: white;
         }
+
         .lang-btn.active {
             background: #667eea;
             color: white;
         }
+
         @media (max-width: 768px) {
             .hero h1 {
                 font-size: 2em;
             }
+
             .hero p {
                 font-size: 1.1em;
             }
+
             .section {
                 padding: 25px 20px;
             }
+
             .cta-buttons {
                 flex-direction: column;
                 align-items: stretch;
             }
+
             .cta-button {
                 width: 100%;
                 text-align: center;
             }
+
             .language-switcher {
                 top: 10px;
                 right: 10px;
                 padding: 8px;
             }
+
             .lang-btn {
                 padding: 6px 10px;
                 font-size: 0.8em;
@@ -218,12 +257,20 @@
         }
     </style>
 </head>
+
 <body>
     <div class="language-switcher">
+<<<<<<< HEAD
         <a href="/" class="lang-btn">日本語</a>
         <a href="index-en.html" class="lang-btn">English</a>
         <a href="index-zh.html" class="lang-btn active">中文</a>
         <a href="index-ko.html" class="lang-btn">한국어</a>
+=======
+        <a href="./" class="lang-btn">日本語</a>
+        <a href="index-en" class="lang-btn">English</a>
+        <a href="index-zh" class="lang-btn active">中文</a>
+        <a href="index-ko" class="lang-btn">한국어</a>
+>>>>>>> 2b15662 (Update SEO and add feature images)
     </div>
 
     <div class="hero">
@@ -363,7 +410,8 @@
             <h2>联系我们</h2>
             <p>关于本应用的咨询、意见、建议，请通过以下联系表单提交：</p>
             <p style="margin: 20px 0; text-align: center;">
-                <a href="https://docs.google.com/forms/d/1vS7MhblfiWDvx1n9BW3EEZfpoiMmvcikZZDcYGV6wDQ/viewform" target="_blank" class="cta-button cta-primary">联系表单</a>
+                <a href="https://docs.google.com/forms/d/1vS7MhblfiWDvx1n9BW3EEZfpoiMmvcikZZDcYGV6wDQ/viewform"
+                    target="_blank" class="cta-button cta-primary">联系表单</a>
             </p>
             <p>您也可以通过应用内的联系表单与我们联系。</p>
         </div>
@@ -371,10 +419,18 @@
 
     <footer>
         <div class="footer-links">
+<<<<<<< HEAD
             <a href="/">首页</a>
             <a href="terms">使用条款</a>
             <a href="privacy">隐私政策</a>
             <a href="https://docs.google.com/forms/d/1vS7MhblfiWDvx1n9BW3EEZfpoiMmvcikZZDcYGV6wDQ/viewform" target="_blank">联系我们</a>
+=======
+            <a href="index-zh">首页</a>
+            <a href="terms">使用条款</a>
+            <a href="privacy">隐私政策</a>
+            <a href="https://docs.google.com/forms/d/1vS7MhblfiWDvx1n9BW3EEZfpoiMmvcikZZDcYGV6wDQ/viewform"
+                target="_blank">联系我们</a>
+>>>>>>> 2b15662 (Update SEO and add feature images)
         </div>
         <div class="copyright">
             <p>&copy; 2025 OshiVista. All rights reserved.</p>
@@ -382,4 +438,5 @@
         </div>
     </footer>
 </body>
+
 </html>

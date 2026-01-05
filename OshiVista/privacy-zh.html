@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-Hans">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,19 +11,22 @@
             padding: 0;
             box-sizing: border-box;
         }
+
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif;
             line-height: 1.8;
             color: #333;
             background: #f5f5f5;
         }
+
         .container {
             max-width: 900px;
             margin: 0 auto;
             padding: 20px;
             background: white;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
+
         header {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
@@ -30,14 +34,17 @@
             text-align: center;
             margin: -20px -20px 40px -20px;
         }
+
         h1 {
             font-size: 2em;
             margin-bottom: 10px;
         }
+
         .last-updated {
             font-size: 0.9em;
             opacity: 0.9;
         }
+
         h2 {
             color: #667eea;
             margin: 40px 0 20px 0;
@@ -45,42 +52,52 @@
             border-bottom: 2px solid #667eea;
             font-size: 1.5em;
         }
+
         h3 {
             color: #764ba2;
             margin: 30px 0 15px 0;
             font-size: 1.2em;
         }
-        p, li {
+
+        p,
+        li {
             margin-bottom: 15px;
         }
-        ul, ol {
+
+        ul,
+        ol {
             margin-left: 30px;
             margin-bottom: 20px;
         }
+
         .important {
             background: #fff3cd;
             border-left: 4px solid #ffc107;
             padding: 15px;
             margin: 20px 0;
         }
+
         .info-box {
             background: #e8f5e9;
             border-left: 4px solid #4caf50;
             padding: 15px;
             margin: 20px 0;
         }
+
         .warning {
             background: #ffebee;
             border-left: 4px solid #f44336;
             padding: 15px;
             margin: 20px 0;
         }
+
         .contact {
             background: #e7f3ff;
             border-left: 4px solid #2196F3;
             padding: 15px;
             margin: 30px 0;
         }
+
         footer {
             text-align: center;
             margin-top: 60px;
@@ -88,17 +105,21 @@
             color: #666;
             font-size: 0.9em;
         }
+
         a {
             color: #667eea;
             text-decoration: none;
         }
+
         a:hover {
             text-decoration: underline;
         }
+
         .nav-links {
             text-align: center;
             margin: 30px 0;
         }
+
         .nav-links a {
             margin: 0 15px;
             padding: 10px 20px;
@@ -107,27 +128,34 @@
             border-radius: 5px;
             display: inline-block;
         }
+
         .nav-links a:hover {
             background: #764ba2;
             text-decoration: none;
         }
+
         table {
             width: 100%;
             border-collapse: collapse;
             margin: 20px 0;
         }
-        th, td {
+
+        th,
+        td {
             border: 1px solid #ddd;
             padding: 12px;
             text-align: left;
         }
+
         th {
             background-color: #667eea;
             color: white;
         }
+
         tr:nth-child(even) {
             background-color: #f9f9f9;
         }
+
         .language-switcher {
             position: fixed;
             top: 20px;
@@ -136,10 +164,11 @@
             background: white;
             padding: 10px;
             border-radius: 25px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
             display: flex;
             gap: 5px;
         }
+
         .lang-btn {
             padding: 8px 15px;
             border: 2px solid #667eea;
@@ -152,20 +181,24 @@
             transition: all 0.3s;
             cursor: pointer;
         }
+
         .lang-btn:hover {
             background: #667eea;
             color: white;
         }
+
         .lang-btn.active {
             background: #667eea;
             color: white;
         }
+
         @media (max-width: 768px) {
             .language-switcher {
                 top: 10px;
                 right: 10px;
                 padding: 8px;
             }
+
             .lang-btn {
                 padding: 6px 10px;
                 font-size: 0.8em;
@@ -173,12 +206,19 @@
         }
     </style>
 </head>
+
 <body>
     <div class="language-switcher">
         <a href="privacy" class="lang-btn">日本語</a>
+<<<<<<< HEAD
         <a href="privacy-en.html" class="lang-btn">English</a>
         <a href="privacy-zh.html" class="lang-btn active">中文</a>
         <a href="privacy-ko.html" class="lang-btn">한국어</a>
+=======
+        <a href="privacy-en" class="lang-btn">English</a>
+        <a href="privacy-zh" class="lang-btn active">中文</a>
+        <a href="privacy-ko" class="lang-btn">한국어</a>
+>>>>>>> 2b15662 (Update SEO and add feature images)
     </div>
 
     <div class="container">
@@ -188,12 +228,13 @@
         </header>
 
         <div class="nav-links">
-            <a href="index-zh.html">首页</a>
-            <a href="terms-zh.html">使用条款</a>
+            <a href="index-zh">首页</a>
+            <a href="terms-zh">使用条款</a>
         </div>
 
         <section>
-            <p>OshiVista（以下简称"本应用"）的提供者（以下简称"我方"）尊重使用本应用的用户（以下简称"用户"）的隐私，致力于保护个人信息。本隐私政策（以下简称"本政策"）说明本应用收集何种信息以及如何使用和管理这些信息。</p>
+            <p>OshiVista（以下简称"本应用"）的提供者（以下简称"我方"）尊重使用本应用的用户（以下简称"用户"）的隐私，致力于保护个人信息。本隐私政策（以下简称"本政策"）说明本应用收集何种信息以及如何使用和管理这些信息。
+            </p>
         </section>
 
         <section>
@@ -443,7 +484,9 @@
         <div class="contact">
             <h2>第16条（咨询）</h2>
             <p>关于本政策的咨询、个人信息处理的问题、投诉等，请通过以下咨询表提交。</p>
-            <p><strong>咨询表：</strong><a href="https://docs.google.com/forms/d/1vS7MhblfiWDvx1n9BW3EEZfpoiMmvcikZZDcYGV6wDQ/viewform" target="_blank">点击此处咨询</a></p>
+            <p><strong>咨询表：</strong><a
+                    href="https://docs.google.com/forms/d/1vS7MhblfiWDvx1n9BW3EEZfpoiMmvcikZZDcYGV6wDQ/viewform"
+                    target="_blank">点击此处咨询</a></p>
             <p>也可以通过本应用内的咨询表与我方联系。</p>
             <p>我方将适当且迅速地回应您的咨询。</p>
         </div>
@@ -458,8 +501,9 @@
 
         <footer>
             <p>&copy; 2025 OshiVista. All rights reserved.</p>
-            <p><a href="index-zh.html">首页</a> | <a href="terms-zh.html">使用条款</a> | <a href="privacy-zh.html">隐私政策</a></p>
+            <p><a href="index-zh">首页</a> | <a href="terms-zh">使用条款</a> | <a href="privacy-zh">隐私政策</a></p>
         </footer>
     </div>
 </body>
+
 </html>

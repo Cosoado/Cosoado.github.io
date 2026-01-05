@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,19 +11,22 @@
             padding: 0;
             box-sizing: border-box;
         }
+
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif;
             line-height: 1.8;
             color: #333;
             background: #f5f5f5;
         }
+
         .container {
             max-width: 900px;
             margin: 0 auto;
             padding: 20px;
             background: white;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
+
         header {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
@@ -30,14 +34,17 @@
             text-align: center;
             margin: -20px -20px 40px -20px;
         }
+
         h1 {
             font-size: 2em;
             margin-bottom: 10px;
         }
+
         .last-updated {
             font-size: 0.9em;
             opacity: 0.9;
         }
+
         h2 {
             color: #667eea;
             margin: 40px 0 20px 0;
@@ -45,42 +52,52 @@
             border-bottom: 2px solid #667eea;
             font-size: 1.5em;
         }
+
         h3 {
             color: #764ba2;
             margin: 30px 0 15px 0;
             font-size: 1.2em;
         }
-        p, li {
+
+        p,
+        li {
             margin-bottom: 15px;
         }
-        ul, ol {
+
+        ul,
+        ol {
             margin-left: 30px;
             margin-bottom: 20px;
         }
+
         .important {
             background: #fff3cd;
             border-left: 4px solid #ffc107;
             padding: 15px;
             margin: 20px 0;
         }
+
         .info-box {
             background: #e8f5e9;
             border-left: 4px solid #4caf50;
             padding: 15px;
             margin: 20px 0;
         }
+
         .warning {
             background: #ffebee;
             border-left: 4px solid #f44336;
             padding: 15px;
             margin: 20px 0;
         }
+
         .contact {
             background: #e7f3ff;
             border-left: 4px solid #2196F3;
             padding: 15px;
             margin: 30px 0;
         }
+
         footer {
             text-align: center;
             margin-top: 60px;
@@ -88,17 +105,21 @@
             color: #666;
             font-size: 0.9em;
         }
+
         a {
             color: #667eea;
             text-decoration: none;
         }
+
         a:hover {
             text-decoration: underline;
         }
+
         .nav-links {
             text-align: center;
             margin: 30px 0;
         }
+
         .nav-links a {
             margin: 0 15px;
             padding: 10px 20px;
@@ -107,27 +128,34 @@
             border-radius: 5px;
             display: inline-block;
         }
+
         .nav-links a:hover {
             background: #764ba2;
             text-decoration: none;
         }
+
         table {
             width: 100%;
             border-collapse: collapse;
             margin: 20px 0;
         }
-        th, td {
+
+        th,
+        td {
             border: 1px solid #ddd;
             padding: 12px;
             text-align: left;
         }
+
         th {
             background-color: #667eea;
             color: white;
         }
+
         tr:nth-child(even) {
             background-color: #f9f9f9;
         }
+
         .language-switcher {
             position: fixed;
             top: 20px;
@@ -136,10 +164,11 @@
             background: white;
             padding: 10px;
             border-radius: 25px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
             display: flex;
             gap: 5px;
         }
+
         .lang-btn {
             padding: 8px 15px;
             border: 2px solid #667eea;
@@ -152,20 +181,24 @@
             transition: all 0.3s;
             cursor: pointer;
         }
+
         .lang-btn:hover {
             background: #667eea;
             color: white;
         }
+
         .lang-btn.active {
             background: #667eea;
             color: white;
         }
+
         @media (max-width: 768px) {
             .language-switcher {
                 top: 10px;
                 right: 10px;
                 padding: 8px;
             }
+
             .lang-btn {
                 padding: 6px 10px;
                 font-size: 0.8em;
@@ -173,12 +206,19 @@
         }
     </style>
 </head>
+
 <body>
     <div class="language-switcher">
         <a href="privacy" class="lang-btn active">日本語</a>
+<<<<<<< HEAD
         <a href="privacy-en.html" class="lang-btn">English</a>
         <a href="privacy-zh.html" class="lang-btn">中文</a>
         <a href="privacy-ko.html" class="lang-btn">한국어</a>
+=======
+        <a href="privacy-en" class="lang-btn">English</a>
+        <a href="privacy-zh" class="lang-btn">中文</a>
+        <a href="privacy-ko" class="lang-btn">한국어</a>
+>>>>>>> 2b15662 (Update SEO and add feature images)
     </div>
 
     <div class="container">
@@ -188,12 +228,17 @@
         </header>
 
         <div class="nav-links">
+<<<<<<< HEAD
             <a href="/">トップページ</a>
+=======
+            <a href="./">トップページ</a>
+>>>>>>> 2b15662 (Update SEO and add feature images)
             <a href="terms">利用規約</a>
         </div>
 
         <section>
-            <p>OshiVista（以下「本アプリ」といいます）の提供者（以下「当方」といいます）は、本アプリをご利用になる方（以下「ユーザー」といいます）のプライバシーを尊重し、個人情報の保護に努めています。本プライバシーポリシー（以下「本ポリシー」といいます）は、本アプリがどのような情報を収集し、どのように利用・管理するかについて説明するものです。</p>
+            <p>OshiVista（以下「本アプリ」といいます）の提供者（以下「当方」といいます）は、本アプリをご利用になる方（以下「ユーザー」といいます）のプライバシーを尊重し、個人情報の保護に努めています。本プライバシーポリシー（以下「本ポリシー」といいます）は、本アプリがどのような情報を収集し、どのように利用・管理するかについて説明するものです。
+            </p>
         </section>
 
         <section>
@@ -205,7 +250,8 @@
             <h2>第2条（プライバシーポリシーの適用範囲）</h2>
             <ol>
                 <li>本ポリシーは、本アプリが提供するサービスにおいてのみ適用されます。</li>
-                <li>本アプリが利用する外部サービス（OpenAI、Perplexity、Firebase等）については、各サービスのプライバシーポリシーが適用されます。ユーザーは、本アプリの利用に際して、これらの外部サービスのプライバシーポリシーも確認することを推奨します。</li>
+                <li>本アプリが利用する外部サービス（OpenAI、Perplexity、Firebase等）については、各サービスのプライバシーポリシーが適用されます。ユーザーは、本アプリの利用に際して、これらの外部サービスのプライバシーポリシーも確認することを推奨します。
+                </li>
             </ol>
         </section>
 
@@ -214,7 +260,8 @@
 
             <div class="info-box">
                 <h3>3.1 基本的な情報収集方針</h3>
-                <p><strong>本アプリは、原則としてユーザーの個人情報を収集しません。</strong>本アプリは、ユーザー登録やログイン機能を持たず、ユーザーが入力したデータは全てユーザーの端末内にローカル保存されます。</p>
+                <p><strong>本アプリは、原則としてユーザーの個人情報を収集しません。</strong>本アプリは、ユーザー登録やログイン機能を持たず、ユーザーが入力したデータは全てユーザーの端末内にローカル保存されます。
+                </p>
             </div>
 
             <h3>3.2 ユーザーが入力するデータ（ローカル保存）</h3>
@@ -259,11 +306,13 @@
             </table>
 
             <div class="important">
-                <p><strong>重要：</strong> これらの外部サービスに送信される情報は、各サービスのプライバシーポリシーに従って処理されます。各サービスのプライバシーポリシーについては、以下のリンクをご確認ください：</p>
+                <p><strong>重要：</strong>
+                    これらの外部サービスに送信される情報は、各サービスのプライバシーポリシーに従って処理されます。各サービスのプライバシーポリシーについては、以下のリンクをご確認ください：</p>
                 <ul>
                     <li><a href="https://openai.com/policies/privacy-policy" target="_blank">OpenAI プライバシーポリシー</a></li>
                     <li><a href="https://www.perplexity.ai/privacy" target="_blank">Perplexity プライバシーポリシー</a></li>
-                    <li><a href="https://firebase.google.com/support/privacy" target="_blank">Firebase プライバシーとセキュリティ</a></li>
+                    <li><a href="https://firebase.google.com/support/privacy" target="_blank">Firebase プライバシーとセキュリティ</a>
+                    </li>
                 </ul>
             </div>
 
@@ -302,7 +351,8 @@
                 <li>法令に基づく場合</li>
                 <li>人の生命、身体または財産の保護のために必要がある場合であって、ユーザーの同意を得ることが困難である場合</li>
                 <li>公衆衛生の向上または児童の健全な育成の推進のために特に必要がある場合であって、ユーザーの同意を得ることが困難である場合</li>
-                <li>国の機関もしくは地方公共団体またはその委託を受けた者が法令の定める事務を遂行することに対して協力する必要がある場合であって、ユーザーの同意を得ることにより当該事務の遂行に支障を及ぼすおそれがある場合</li>
+                <li>国の機関もしくは地方公共団体またはその委託を受けた者が法令の定める事務を遂行することに対して協力する必要がある場合であって、ユーザーの同意を得ることにより当該事務の遂行に支障を及ぼすおそれがある場合
+                </li>
                 <li>外部サービス連携時に、サービス提供のために必要な範囲で情報を送信する場合（第3条3.3に記載の通り）</li>
             </ol>
 
@@ -346,7 +396,8 @@
                     <li>OSのアップデートや初期化</li>
                     <li>端末の買い替え</li>
                 </ul>
-                <p><strong>当方は、ユーザーデータのバックアップを提供しておりません。</strong>ユーザーは、重要なデータについては、定期的にスクリーンショットの保存やデータのエクスポート（将来実装予定）等、自己の責任でバックアップを行うことを強く推奨します。</p>
+                <p><strong>当方は、ユーザーデータのバックアップを提供しておりません。</strong>ユーザーは、重要なデータについては、定期的にスクリーンショットの保存やデータのエクスポート（将来実装予定）等、自己の責任でバックアップを行うことを強く推奨します。
+                </p>
             </div>
         </section>
 
@@ -414,7 +465,8 @@
                 <li>提供元: Google LLC</li>
                 <li>収集される情報: 匿名の利用統計情報、アプリの動作状況、クラッシュレポート</li>
                 <li>利用目的: アプリの品質向上、バグの修正、ユーザー体験の改善</li>
-                <li>プライバシーポリシー: <a href="https://firebase.google.com/support/privacy" target="_blank">Firebase プライバシーとセキュリティ</a></li>
+                <li>プライバシーポリシー: <a href="https://firebase.google.com/support/privacy" target="_blank">Firebase
+                        プライバシーとセキュリティ</a></li>
             </ul>
 
             <p>これらの分析ツールは、個人を特定できない形式でデータを収集・処理します。</p>
@@ -436,14 +488,17 @@
             <ol>
                 <li>本アプリは、ユーザーの端末内にデータをローカル保存しているため、ユーザーは本アプリ内でいつでも自身のデータを閲覧、編集、削除することができます。</li>
                 <li>外部サービスに送信されたデータについて開示、訂正、削除を希望される場合は、各外部サービスのプライバシーポリシーに従って手続きを行ってください。</li>
-                <li>当方が保有する分析データ等について開示、訂正、削除を希望される場合は、第16条に記載のお問い合わせ先までご連絡ください。ただし、匿名化されたデータについては、個人を特定できないため、対応できない場合があります。</li>
+                <li>当方が保有する分析データ等について開示、訂正、削除を希望される場合は、第16条に記載のお問い合わせ先までご連絡ください。ただし、匿名化されたデータについては、個人を特定できないため、対応できない場合があります。
+                </li>
             </ol>
         </section>
 
         <div class="contact">
             <h2>第16条（お問い合わせ）</h2>
             <p>本ポリシーに関するお問い合わせ、個人情報の取扱いに関するご質問、苦情等は、以下のお問い合わせフォームよりお願いいたします。</p>
-            <p><strong>お問い合わせフォーム：</strong> <a href="https://docs.google.com/forms/d/1vS7MhblfiWDvx1n9BW3EEZfpoiMmvcikZZDcYGV6wDQ/viewform" target="_blank">こちらからお問い合わせください</a></p>
+            <p><strong>お問い合わせフォーム：</strong> <a
+                    href="https://docs.google.com/forms/d/1vS7MhblfiWDvx1n9BW3EEZfpoiMmvcikZZDcYGV6wDQ/viewform"
+                    target="_blank">こちらからお問い合わせください</a></p>
             <p>本アプリ内のお問い合わせフォームからもご連絡いただけます。</p>
             <p>お問い合わせいただいた内容については、適切かつ迅速に対応させていただきます。</p>
         </div>
@@ -458,8 +513,13 @@
 
         <footer>
             <p>&copy; 2025 OshiVista. All rights reserved.</p>
+<<<<<<< HEAD
             <p><a href="/">トップページ</a> | <a href="terms">利用規約</a> | <a href="privacy">プライバシーポリシー</a></p>
+=======
+            <p><a href="./">トップページ</a> | <a href="terms">利用規約</a> | <a href="privacy">プライバシーポリシー</a></p>
+>>>>>>> 2b15662 (Update SEO and add feature images)
         </footer>
     </div>
 </body>
+
 </html>

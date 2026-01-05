@@ -2,10 +2,36 @@
 <html lang="ja">
 
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-XXXXXXXXXX');
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cosoado Lab | Innovation & Design</title>
-    <meta name="description" content="Cosoado Lab - 創造性を刺激するアプリケーション開発ラボ。Nazokake、OshiVistaなどを提供。">
+    <title>Cosoado Lab | テクノロジーとデザインの融合によるAIプロダクト開発スタジオ</title>
+    <meta name="description"
+        content="Cosoado Labは、テクノロジーとデザインの融合を探求するAIプロダクト開発スタジオです。謎かけメーカー、OshiVista、Over100、Omakase Master、ByeByeスマホなど、日常を豊かにする革新的なアプリケーションを提供しています。">
+    <meta name="keywords" content="AIアプリ, アプリ開発, デザイン, Cosoado Lab, 謎かけ, 推し活, 目標達成, デジタルデトックス, 会話AI">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://cosoado-lab.com/">
+    <meta property="og:title" content="Cosoado Lab | テクノロジーとデザインの融合によるAIプロダクト開発スタジオ">
+    <meta property="og:description" content="AIを活用したユニークなアプリ開発を行い、日常に新しい体験を提供します。謎かけメーカー、OshiVista、Over100などのプロダクト公開中。">
+    <meta property="og:image" content="https://cosoado-lab.com/assets/og_image.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://cosoado-lab.com/">
+    <meta property="twitter:title" content="Cosoado Lab | テクノロジーとデザインの融合によるAIプロダクト開発スタジオ">
+    <meta property="twitter:description" content="AIを活用したユニークなアプリ開発を行い、日常に新しい体験を提供します。">
+    <meta property="twitter:image" content="https://cosoado-lab.com/assets/og_image.png">
+
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,9 +46,94 @@
       "@type": "Organization",
       "url": "https://cosoado-lab.com",
       "name": "Cosoado Lab",
-      "description": "App Development Laboratory"
+      "description": "AI Product Development & Design Laboratory",
+      "logo": "https://cosoado-lab.com/favicon.png",
+      "sameAs": [
+        "https://twitter.com/cosoado_lab"
+      ]
     }
     </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "謎かけメーカー (Nazokake Maker)",
+          "url": "https://cosoado-lab.com/NazokakeApp/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "OshiVista",
+          "url": "https://cosoado-lab.com/OshiVista/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Over100",
+          "url": "https://cosoado-lab.com/Over100/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Omakase Master",
+          "url": "https://cosoado-lab.com/OmakaseMaster/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "ByeByeスマホ (ByeBye Sumaho)",
+          "url": "https://cosoado-lab.com/byebyeSumaho/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "name": "TopicUp",
+          "url": "https://cosoado-lab.com/TopicUp/"
+        }
+      ]
+    }
+    </script>
+    <script type="application/ld+json">
+    [
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "謎かけメーカー",
+        "applicationCategory": "EntertainmentApplication",
+        "operatingSystem": "iOS, Android",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "JPY" }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "OshiVista",
+        "applicationCategory": "LifestyleApplication",
+        "operatingSystem": "iOS, Android",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "JPY" }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Over100",
+        "applicationCategory": "ProductivityApplication",
+        "operatingSystem": "iOS, Android",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "JPY" }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "TopicUp",
+        "applicationCategory": "SocialApplication",
+        "operatingSystem": "iOS, Android",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "JPY" }
+      }
+    ]
+    </script>
+    <link rel="icon" href="/favicon.png" type="image/png">
 </head>
 
 <body>
@@ -44,12 +155,13 @@
         <section class="hero">
             <div class="container">
                 <h1 class="hero-title">
-                    Digital Craftsmanship
-                    <span>from the Lab.</span>
+                    Cosoado Lab
+                    <span>Techno x Design</span>
                 </h1>
                 <p class="hero-subtitle">
-                    私たちは、テクノロジーとデザインの融合を探求する実験室です。<br>
-                    日常に少しの驚きと、洗練された体験を。
+                    テクノロジーとデザインの融合を探求する<strong>AIプロダクト開発スタジオ</strong>。<br>
+                    日常に少しの驚きと、洗練された体験を。<br>
+                    「推し活」「デジタルデトックス」「伝統文化」など、様々なテーマをAIの力でアップデートします。
                 </p>
                 <a href="#projects" class="hero-cta">View Projects</a>
             </div>
@@ -62,63 +174,98 @@
 
                     <!-- Nazokake Maker -->
                     <article class="card">
-                        <div class="card-image-placeholder">N</div>
+                        <div class="card-image-wrapper">
+                            <img src="assets/nazokake_feature.png" alt="謎かけメーカー - AIと競う言葉のアートアプリ" class="card-image"
+                                loading="lazy">
+                        </div>
                         <div class="card-content">
                             <h3 class="card-title">謎かけメーカー</h3>
-                            <p class="card-desc">AIと競う、言葉のアート。洗練された和のデザインで楽しむ、新しい謎かけ体験。</p>
-                            <a href="/NazokakeApp/" class="card-link stretched-link">Explore →</a>
+                            <p class="card-desc">
+                                <strong>「AIと競う、言葉のアート」</strong><br>
+                                日本の伝統的な言葉遊び「謎かけ」をAIと共に楽しむエンターテインメントアプリです。お題を入力すると、AIが「その心は…」と機知に富んだ回答を生成。風情ある和のデザインの中で、あなたの言葉のセンスを磨き、AIと競い合う新しい体験を提供します。
+                            </p>
+                            <a href="/NazokakeApp/" class="card-link" aria-label="謎かけメーカーの詳細を見る">謎かけメーカーの詳細 →</a>
                         </div>
                     </article>
 
                     <!-- OshiVista -->
                     <article class="card">
-                        <div class="card-image-placeholder">O</div>
+                        <div class="card-image-wrapper">
+                            <img src="assets/oshivista_feature.png" alt="OshiVista - 推し活活動記録プラットフォーム" class="card-image"
+                                loading="lazy">
+                        </div>
                         <div class="card-content">
                             <h3 class="card-title">OshiVista</h3>
-                            <p class="card-desc">あなたの「推し」活動を最大限にサポートするビジュアル重視のプラットフォーム。</p>
-                            <a href="/OshiVista/" class="card-link stretched-link">Explore →</a>
+                            <p class="card-desc">
+                                <strong>「推しのすべてを、美しく記録する」</strong><br>
+                                あなたの「推し活」を美しく可視化する専用プラットフォーム。コンサートの思い出、グッズ購入履歴、記念日などをタイムライン形式で記録し、推しとの日々を鮮やかに振り返ることができます。感情を揺さぶるビジュアル重視のUIが特徴です。
+                            </p>
+                            <a href="/OshiVista/" class="card-link" aria-label="OshiVistaの詳細を見る">OshiVistaの詳細 →</a>
                         </div>
                     </article>
 
                     <!-- Over100 -->
                     <article class="card">
-                        <div class="card-image-placeholder">100</div>
+                        <div class="card-image-wrapper">
+                            <img src="assets/over100_feature.png" alt="Over100 - 自己成長とポテンシャル解放アプリ" class="card-image"
+                                loading="lazy">
+                        </div>
                         <div class="card-content">
                             <h3 class="card-title">Over100</h3>
-                            <p class="card-desc">限界を超えるためのツール。あなたのポテンシャルを解放します。</p>
-                            <a href="/Over100/" class="card-link stretched-link">Explore →</a>
+                            <p class="card-desc">
+                                <strong>「限界の、その先へ」</strong><br>
+                                99点の満足を超え、100点以上の成果を目指すハイパフォーマーのための目標管理ツール。日々の進捗をデータで見える化し、あなたの潜在能力を最大限に引き出します。ビジネス、スポーツ、学習など、あらゆる挑戦をサポートします。
+                            </p>
+                            <a href="/Over100/" class="card-link" aria-label="Over100の詳細を見る">Over100の詳細 →</a>
                         </div>
                     </article>
 
                     <!-- OmakaseMaster -->
                     <article class="card">
-                        <div class="card-image-placeholder">M</div>
+                        <div class="card-image-wrapper">
+                            <img src="assets/omakase_feature.png" alt="Omakase Master - AI意思決定サポートアプリ"
+                                class="card-image" loading="lazy">
+                        </div>
                         <div class="card-content">
                             <h3 class="card-title">Omakase Master</h3>
-                            <p class="card-desc">迷った時の強い味方。AIが最適な選択を提案します。</p>
-                            <a href="/OmakaseMaster/" class="card-link stretched-link">Explore →</a>
+                            <p class="card-desc">
+                                <strong>「決断の迷いを、楽しみに変える」</strong><br>
+                                今日のランチから重要な決断まで、優柔不断なあなたをAIがサポート。「おまかせ」ボタン一つで、AIが最適な選択肢を提案します。迷う時間を減らし、行動する時間を増やす、スマートな意思決定パートナーです。
+                            </p>
+                            <a href="/OmakaseMaster/" class="card-link" aria-label="Omakase Masterの詳細を見る">Omakase
+                                Masterの詳細 →</a>
                         </div>
                     </article>
 
                     <!-- ByeByeSumaho -->
                     <article class="card">
-                        <div class="card-image-placeholder">B</div>
+                        <div class="card-image-wrapper">
+                            <img src="assets/byebyesumaho_feature.png" alt="ByeByeスマホ - デジタルデトックスアプリ" class="card-image"
+                                loading="lazy">
+                        </div>
                         <div class="card-content">
                             <h3 class="card-title">ByeByeスマホ</h3>
-                            <p class="card-desc">デジタルデトックスをサポート。スマホとの健全な距離感を。</p>
-                            <a href="/byebyeSumaho/" class="card-link stretched-link">Explore →</a>
+                            <p class="card-desc">
+                                <strong>「スマホを置いて、世界を見よう」</strong><br>
+                                ついついスマホを見てしまう時間を減らし、現実世界の充実を取り戻すためのデジタルデトックスアプリ。スマホを触らない時間に応じてキャラクターが育つゲーミフィケーション要素で、無理なく楽しくスマホ断ちを継続できます。
+                            </p>
+                            <a href="/byebyeSumaho/" class="card-link" aria-label="ByeByeスマホの詳細を見る">ByeByeスマホの詳細 →</a>
                         </div>
                     </article>
 
-                    <!-- ToPic Up -->
+                    <!-- TopicUp -->
                     <article class="card">
-                        <div class="card-image-placeholder"
-                            style="background: linear-gradient(135deg, #00f3ff, #bc13fe); color: white; border: none;">T
+                        <div class="card-image-wrapper">
+                            <img src="assets/topicup_feature.png" alt="TopicUp - 会話トピック生成AIアプリ" class="card-image"
+                                loading="lazy">
                         </div>
                         <div class="card-content">
-                            <h3 class="card-title">ToPic Up</h3>
-                            <p class="card-desc">会話が弾む、AIパートナー。最適なトピックで、もっと自由なコミュニケーションを。</p>
-                            <a href="/TopicUp/" class="card-link stretched-link">Explore →</a>
+                            <h3 class="card-title">TopicUp</h3>
+                            <p class="card-desc">
+                                <strong>「会話のきっかけ、無限大」</strong><br>
+                                沈黙を恐れる必要はもうありません。AIがシチュエーションに合わせて最適な会話トピックを提案する話題生成アプリ。初対面のアイスブレイクから、親しい人との深い語らいまで、会話の彩りを豊かに広げます。
+                            </p>
+                            <a href="/TopicUp/" class="card-link" aria-label="TopicUpの詳細を見る">TopicUpの詳細 →</a>
                         </div>
                     </article>
 

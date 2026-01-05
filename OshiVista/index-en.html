@@ -1,50 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OshiVista - Fan Activity Support App | Terms of Service & Privacy Policy</title>
-    <meta name="description" content="OshiVista is an app that supports your fan activities. Manage your favorite celebrities, event schedules, and memories all in one app.">
+    <meta name="description"
+        content="OshiVista is an app that supports your fan activities. Manage your favorite celebrities, event schedules, and memories all in one app.">
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
+
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif;
             line-height: 1.8;
             color: #333;
             background: #f5f5f5;
         }
+
         .hero {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
             padding: 80px 20px;
             text-align: center;
         }
+
         .hero h1 {
             font-size: 3em;
             margin-bottom: 20px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
         }
+
         .hero p {
             font-size: 1.3em;
             margin-bottom: 10px;
             opacity: 0.95;
         }
+
         .container {
             max-width: 1000px;
             margin: 0 auto;
             padding: 40px 20px;
         }
+
         .section {
             background: white;
             padding: 40px;
             margin-bottom: 30px;
             border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
+
         h2 {
             color: #667eea;
             margin-bottom: 25px;
@@ -52,32 +61,38 @@
             border-bottom: 3px solid #667eea;
             font-size: 2em;
         }
+
         h3 {
             color: #764ba2;
             margin: 25px 0 15px 0;
             font-size: 1.4em;
         }
+
         .features {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 25px;
             margin: 30px 0;
         }
+
         .feature {
             background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
             padding: 25px;
             border-radius: 10px;
             text-align: center;
         }
+
         .feature-icon {
             font-size: 3em;
             margin-bottom: 15px;
         }
+
         .feature h3 {
             color: #667eea;
             margin: 15px 0;
             font-size: 1.2em;
         }
+
         .cta-buttons {
             display: flex;
             justify-content: center;
@@ -85,6 +100,7 @@
             margin: 40px 0;
             flex-wrap: wrap;
         }
+
         .cta-button {
             padding: 15px 40px;
             font-size: 1.2em;
@@ -93,25 +109,30 @@
             transition: all 0.3s;
             display: inline-block;
         }
+
         .cta-primary {
             background: #667eea;
             color: white;
         }
+
         .cta-primary:hover {
             background: #764ba2;
             transform: translateY(-2px);
             box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
         }
+
         .cta-secondary {
             background: white;
             color: #667eea;
             border: 2px solid #667eea;
         }
+
         .cta-secondary:hover {
             background: #667eea;
             color: white;
             transform: translateY(-2px);
         }
+
         .info-box {
             background: #e8f5e9;
             border-left: 4px solid #4caf50;
@@ -119,6 +140,7 @@
             margin: 25px 0;
             border-radius: 5px;
         }
+
         .warning-box {
             background: #fff3cd;
             border-left: 4px solid #ffc107;
@@ -126,12 +148,15 @@
             margin: 25px 0;
             border-radius: 5px;
         }
+
         ul {
             margin: 20px 0 20px 30px;
         }
+
         li {
             margin-bottom: 12px;
         }
+
         footer {
             background: #2c3e50;
             color: white;
@@ -139,23 +164,28 @@
             padding: 40px 20px;
             margin-top: 50px;
         }
+
         footer a {
-            color: #67eea;
+            color: #667eea;
             text-decoration: none;
             margin: 0 15px;
         }
+
         footer a:hover {
             text-decoration: underline;
         }
+
         .footer-links {
             margin: 20px 0;
             font-size: 1.1em;
         }
+
         .copyright {
             margin-top: 30px;
             opacity: 0.8;
             font-size: 0.9em;
         }
+
         .language-switcher {
             position: fixed;
             top: 20px;
@@ -164,10 +194,11 @@
             background: white;
             padding: 10px;
             border-radius: 25px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
             display: flex;
             gap: 5px;
         }
+
         .lang-btn {
             padding: 8px 15px;
             border: 2px solid #667eea;
@@ -180,37 +211,46 @@
             transition: all 0.3s;
             cursor: pointer;
         }
+
         .lang-btn:hover {
             background: #667eea;
             color: white;
         }
+
         .lang-btn.active {
             background: #667eea;
             color: white;
         }
+
         @media (max-width: 768px) {
             .hero h1 {
                 font-size: 2em;
             }
+
             .hero p {
                 font-size: 1.1em;
             }
+
             .section {
                 padding: 25px 20px;
             }
+
             .cta-buttons {
                 flex-direction: column;
                 align-items: stretch;
             }
+
             .cta-button {
                 width: 100%;
                 text-align: center;
             }
+
             .language-switcher {
                 top: 10px;
                 right: 10px;
                 padding: 8px;
             }
+
             .lang-btn {
                 padding: 6px 10px;
                 font-size: 0.8em;
@@ -218,12 +258,20 @@
         }
     </style>
 </head>
+
 <body>
     <div class="language-switcher">
+<<<<<<< HEAD
         <a href="/" class="lang-btn">日本語</a>
         <a href="index-en.html" class="lang-btn active">English</a>
         <a href="index-zh.html" class="lang-btn">中文</a>
         <a href="index-ko.html" class="lang-btn">한국어</a>
+=======
+        <a href="./" class="lang-btn">日本語</a>
+        <a href="index-en" class="lang-btn active">English</a>
+        <a href="index-zh" class="lang-btn">中文</a>
+        <a href="index-ko" class="lang-btn">한국어</a>
+>>>>>>> 2b15662 (Update SEO and add feature images)
     </div>
 
     <div class="hero">
@@ -235,7 +283,9 @@
     <div class="container">
         <div class="section">
             <h2>About OshiVista</h2>
-            <p>OshiVista is a mobile application that supports your fan activities. Easily manage information about your favorite celebrities (entertainers, idols, voice actors, VTubers, etc.), check event schedules, and record memories all in one app.</p>
+            <p>OshiVista is a mobile application that supports your fan activities. Easily manage information about your
+                favorite celebrities (entertainers, idols, voice actors, VTubers, etc.), check event schedules, and
+                record memories all in one app.</p>
 
             <div class="features">
                 <div class="feature">
@@ -256,7 +306,8 @@
                 <div class="feature">
                     <div class="feature-icon">🤖</div>
                     <h3>AI Features</h3>
-                    <p>Automatically retrieve the latest information about your favorites using AI technology. Easy event search</p>
+                    <p>Automatically retrieve the latest information about your favorites using AI technology. Easy
+                        event search</p>
                 </div>
                 <div class="feature">
                     <div class="feature-icon">🌐</div>
@@ -274,11 +325,14 @@
         <div class="section">
             <h2>Main Features</h2>
             <ul>
-                <li><strong>Register and Manage Favorites:</strong> Record profile images, names, theme colors, fan anniversary dates, and more</li>
-                <li><strong>Event Schedule Management:</strong> Manage schedules for concerts, TV appearances, events, etc.</li>
+                <li><strong>Register and Manage Favorites:</strong> Record profile images, names, theme colors, fan
+                    anniversary dates, and more</li>
+                <li><strong>Event Schedule Management:</strong> Manage schedules for concerts, TV appearances, events,
+                    etc.</li>
                 <li><strong>Calendar Integration:</strong> Check schedules by linking with your device's calendar</li>
                 <li><strong>Notification Feature:</strong> Receive notifications before events start</li>
-                <li><strong>AI Information Search:</strong> Automatically search for the latest information and official websites</li>
+                <li><strong>AI Information Search:</strong> Automatically search for the latest information and official
+                    websites</li>
                 <li><strong>Memory Collection:</strong> Record and revisit memories with photos and notes</li>
                 <li><strong>Customizable:</strong> Freely customize theme colors and display settings</li>
             </ul>
@@ -289,20 +343,26 @@
 
             <div class="info-box">
                 <h3>📌 Important Notice</h3>
-                <p><strong>Your data is stored locally on your device.</strong> It is not sent to our servers, so you can use it with confidence.</p>
+                <p><strong>Your data is stored locally on your device.</strong> It is not sent to our servers, so you
+                    can use it with confidence.</p>
             </div>
 
             <h3>Data Handling</h3>
             <ul>
-                <li><strong>Local Storage:</strong> Favorite celebrity information, event information, photos, etc. are all stored on your device</li>
-                <li><strong>No Personal Information Required:</strong> No user registration or login required. No personal information input needed</li>
-                <li><strong>External Services:</strong> AI features and information search use external services (OpenAI, Perplexity, Firebase)</li>
-                <li><strong>Anonymous Analytics:</strong> Anonymous usage statistics are collected to improve the app</li>
+                <li><strong>Local Storage:</strong> Favorite celebrity information, event information, photos, etc. are
+                    all stored on your device</li>
+                <li><strong>No Personal Information Required:</strong> No user registration or login required. No
+                    personal information input needed</li>
+                <li><strong>External Services:</strong> AI features and information search use external services
+                    (OpenAI, Perplexity, Firebase)</li>
+                <li><strong>Anonymous Analytics:</strong> Anonymous usage statistics are collected to improve the app
+                </li>
             </ul>
 
             <div class="warning-box">
                 <h3>⚠️ About Data Backup</h3>
-                <p>Since data is stored on your device, it may be lost if you uninstall the app or your device fails. We recommend regularly backing up important data via screenshots or other methods.</p>
+                <p>Since data is stored on your device, it may be lost if you uninstall the app or your device fails. We
+                    recommend regularly backing up important data via screenshots or other methods.</p>
             </div>
         </div>
 
@@ -316,7 +376,8 @@
             </div>
 
             <div class="info-box">
-                <p><strong>By downloading and installing the app, you are deemed to have agreed to the Terms of Service and Privacy Policy.</strong></p>
+                <p><strong>By downloading and installing the app, you are deemed to have agreed to the Terms of Service
+                        and Privacy Policy.</strong></p>
                 <p>Please be sure to read both terms before use.</p>
             </div>
         </div>
@@ -340,7 +401,8 @@
             <h3>Firebase (Google)</h3>
             <ul>
                 <li>Purpose: App configuration management, analytics, crash reporting</li>
-                <li><a href="https://firebase.google.com/support/privacy" target="_blank">Firebase Privacy and Security</a></li>
+                <li><a href="https://firebase.google.com/support/privacy" target="_blank">Firebase Privacy and
+                        Security</a></li>
             </ul>
 
             <p>The use of these external services is subject to each service's Terms of Service and Privacy Policy.</p>
@@ -350,7 +412,8 @@
             <h2>Disclaimer</h2>
             <div class="warning-box">
                 <ul>
-                    <li>Information about your favorites provided by this app (event information, etc.) is retrieved using AI technology and may contain errors or outdated information</li>
+                    <li>Information about your favorites provided by this app (event information, etc.) is retrieved
+                        using AI technology and may contain errors or outdated information</li>
                     <li>Please always verify important information on official websites</li>
                     <li>We assume no responsibility for any damages arising from the use of this app</li>
                     <li>The content of this app may be changed or terminated without notice</li>
@@ -363,7 +426,8 @@
             <h2>Contact Us</h2>
             <p>For inquiries, opinions, or requests regarding this app, please use the contact form below:</p>
             <p style="margin: 20px 0; text-align: center;">
-                <a href="https://docs.google.com/forms/d/1vS7MhblfiWDvx1n9BW3EEZfpoiMmvcikZZDcYGV6wDQ/viewform" target="_blank" class="cta-button cta-primary">Contact Form</a>
+                <a href="https://docs.google.com/forms/d/1vS7MhblfiWDvx1n9BW3EEZfpoiMmvcikZZDcYGV6wDQ/viewform"
+                    target="_blank" class="cta-button cta-primary">Contact Form</a>
             </p>
             <p>You can also contact us from the contact form within the app.</p>
         </div>
@@ -371,10 +435,18 @@
 
     <footer>
         <div class="footer-links">
+<<<<<<< HEAD
             <a href="/">Home</a>
             <a href="terms">Terms of Service</a>
             <a href="privacy">Privacy Policy</a>
             <a href="https://docs.google.com/forms/d/1vS7MhblfiWDvx1n9BW3EEZfpoiMmvcikZZDcYGV6wDQ/viewform" target="_blank">Contact</a>
+=======
+            <a href="index-en">Home</a>
+            <a href="terms">Terms of Service</a>
+            <a href="privacy">Privacy Policy</a>
+            <a href="https://docs.google.com/forms/d/1vS7MhblfiWDvx1n9BW3EEZfpoiMmvcikZZDcYGV6wDQ/viewform"
+                target="_blank">Contact</a>
+>>>>>>> 2b15662 (Update SEO and add feature images)
         </div>
         <div class="copyright">
             <p>&copy; 2025 OshiVista. All rights reserved.</p>
@@ -382,4 +454,5 @@
         </div>
     </footer>
 </body>
+
 </html>
