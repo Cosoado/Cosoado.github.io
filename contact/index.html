@@ -149,6 +149,14 @@
             }
             // フォームは通常通りFormspreeへ送信される
         });
+
+        // ブラウザの戻るボタンでFormspreeから戻った時にフォームをクリア
+        window.addEventListener('pageshow', function (event) {
+            if (event.persisted) {
+                // bfcache（Back-Forward Cache）から復元された場合
+                form.reset();
+            }
+        });
     </script>
 </body>
 
