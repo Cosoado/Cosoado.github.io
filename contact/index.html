@@ -78,6 +78,7 @@
                             <label for="email" class="form-label">Email</label>
                             <input type="email" id="email" name="email" class="form-input" required
                                 placeholder="メールアドレス">
+                            <span id="email-error" class="form-error"></span>
                         </div>
 
                         <div class="form-group">
@@ -91,7 +92,7 @@
                                 placeholder="お問い合わせ内容"></textarea>
                         </div>
 
-                        <button type="submit" class="submit-btn">
+                        <button type="submit" class="submit-btn" id="submit-btn">
                             Send Message
                             <span class="btn-icon">→</span>
                         </button>
@@ -111,9 +112,45 @@
 
     <script src="../script.js"></script>
     <script>
-        // Use existing script.js for cursor effects.
-        // We might need to initialize cursor logic if it's not self-initializing in script.js
-        // Assuming script.js handles DOMContentLoaded.
+        // Form Validation Script
+        const emailInput = document.getElementById('email');
+        const emailError = document.getElementById('email-error');
+        const form = document.querySelector('.contact-form');
+        const submitBtn = document.getElementById('submit-btn');
+
+        const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+
+        function validateEmail() {
+            if (!emailInput.value.match(emailPattern)) {
+                emailError.textContent = '有効なメールアドレスを入力してください';
+                emailError.style.display = 'block';
+                return false;
+            } else {
+                emailError.textContent = '';
+                emailError.style.display = 'none';
+                return true;
+            }
+        }
+
+        emailInput.addEventListener('blur', function () {
+            if (this.value) validateEmail();
+        });
+
+        emailInput.addEventListener('input', function () {
+            if (emailError.textContent) validateEmail();
+        });
+
+        form.addEventListener('submit', function (e) {
+            if (!validateEmail()) {
+                e.preventDefault();
+                // Shake animation or focus
+                emailInput.focus();
+                emailInput.style.borderColor = '#ff6b6b';
+                setTimeout(() => {
+                    emailInput.style.borderColor = 'rgba(255, 255, 255, 0.1)';
+                }, 2000);
+            }
+        });
     </script>
 </body>
 

@@ -472,6 +472,28 @@ h3 {
     position: relative;
 }
 
+.form-error {
+    color: #ff6b6b;
+    font-size: 0.8rem;
+    font-weight: 500;
+    margin-top: -5px;
+    margin-left: 5px;
+    display: none;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 .form-label {
     font-family: var(--font-heading);
     color: var(--text-secondary);
