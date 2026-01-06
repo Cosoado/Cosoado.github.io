@@ -450,6 +450,12 @@ h3 {
 }
 
 /* Enhanced Glass Panel */
+.contact-header .hero-subtitle {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
 .glass-panel {
     background: rgba(255, 255, 255, 0.03);
     backdrop-filter: blur(20px);
