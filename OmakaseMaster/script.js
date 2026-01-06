@@ -1,6 +1,6 @@
 const translations = {
     en: {
-        title: 'OmakaseMaster - Terms of Service & Privacy Policy',
+        title: 'OmakaseMaster - Master the Art of Sushi',
         privacyTitle: 'Privacy Policy - OmakaseMaster',
         termsTitle: 'Terms of Service - OmakaseMaster',
         appIconText: 'Sushi',
