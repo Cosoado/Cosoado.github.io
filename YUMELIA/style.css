@@ -159,6 +159,14 @@ section {
     color: var(--text-muted);
 }
 
+.name-origin {
+    font-size: 0.9rem;
+    color: var(--gold);
+    opacity: 0.8;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
 .hero-desc {
     margin-bottom: 40px;
     color: var(--text-muted);
