@@ -1,0 +1,12 @@
+# Robots.txt for cosoado-lab.com
+# Last updated: 2026-01-07
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://cosoado-lab.com/sitemap.xml
+
+# Disallow common non-content paths
+Disallow: /.git/
+Disallow: /aws-backend/
