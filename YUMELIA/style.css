@@ -348,3 +348,28 @@ section {
         padding: 30px 20px;
     }
 }
+
+/* Back Button for Legal Pages */
+.back-btn-container {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.back-btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background: transparent;
+    border: 1px solid var(--gold);
+    color: var(--gold);
+    border-radius: 30px;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    transition: var(--transition);
+}
+
+.back-btn:hover {
+    background: var(--gold);
+    color: var(--primary);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 215, 0, 0.2);
+}
