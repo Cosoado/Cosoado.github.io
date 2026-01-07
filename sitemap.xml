@@ -20,6 +20,22 @@
   
   <!-- Nazokake Maker -->
   <url>
+    <loc>https://cosoado-lab.com/YUMELIA/</loc>
+    <lastmod>2026-01-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://cosoado-lab.com/YUMELIA/terms.html</loc>
+    <lastmod>2026-01-07</lastmod>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://cosoado-lab.com/YUMELIA/privacy.html</loc>
+    <lastmod>2026-01-07</lastmod>
+    <priority>0.3</priority>
+  </url>
+  <url>
     <loc>https://cosoado-lab.com/NazokakeApp/</loc>
     <lastmod>2026-01-07</lastmod>
     <changefreq>monthly</changefreq>
