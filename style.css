@@ -162,7 +162,7 @@ h3 {
     width: 100%;
     z-index: 100;
     backdrop-filter: blur(5px);
-    transition: background 0.3s ease;
+    transition: background 0.3s ease, padding 0.3s ease;
 }
 
 .header.scrolled {
@@ -412,6 +412,27 @@ h3 {
         padding: 0 25px;
     }
 
+    .header {
+        padding: 15px 0;
+    }
+
+    .logo-text {
+        font-size: 1.1rem;
+        margin-left: 8px;
+    }
+
+    .logo-image {
+        height: 32px;
+    }
+
+    .nav-links {
+        gap: 15px !important;
+    }
+
+    .nav-links a {
+        font-size: 0.9rem;
+    }
+
     .hero-title {
         font-size: 3rem;
     }
@@ -432,6 +453,44 @@ h3 {
     .cursor-dot,
     .cursor-outline {
         display: none;
+    }
+
+    .hero-title {
+        font-size: 3.5rem;
+        /* Adjusted for better mobile fit */
+    }
+
+    .hero-title span {
+        font-size: 4rem;
+    }
+
+    .hero {
+        align-items: flex-start;
+        /* Better alignment on mobile */
+        text-align: left;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+        margin-bottom: 40px;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+        margin-bottom: 50px;
+    }
+
+    .card {
+        min-height: auto;
+        /* Allow flexible height */
+    }
+
+    .card-image-wrapper {
+        height: 180px;
+    }
+
+    .footer {
+        padding: 60px 0;
     }
 }
 

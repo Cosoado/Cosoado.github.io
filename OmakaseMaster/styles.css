@@ -1,11 +1,15 @@
 :root {
     /* Colors */
-    --color-primary: #2D4A3E; /* Deep Cypress Green */
+    --color-primary: #2D4A3E;
+    /* Deep Cypress Green */
     --color-primary-dark: #1e3329;
-    --color-accent: #C5A059; /* Subtle Gold */
-    --color-bg: #F9F7F2; /* Washi / Off-white */
+    --color-accent: #C5A059;
+    /* Subtle Gold */
+    --color-bg: #F9F7F2;
+    /* Washi / Off-white */
     --color-surface: #FFFFFF;
-    --color-text: #1A1A1A; /* Dark Ink */
+    --color-text: #1A1A1A;
+    /* Dark Ink */
     --color-text-light: #666666;
     --color-border: #E5E5E5;
 
@@ -16,9 +20,10 @@
     --radius-full: 9999px;
     --shadow-soft: 0 20px 40px -10px rgba(45, 74, 62, 0.08);
     --shadow-hover: 0 25px 50px -12px rgba(45, 74, 62, 0.12);
-    
+
     /* Typography */
-    --font-heading: "Noto Serif JP", serif; /* Fallback to serif */
+    --font-heading: "Noto Serif JP", serif;
+    /* Fallback to serif */
     --font-body: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
@@ -44,8 +49,15 @@ body {
 
 /* Animations */
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .fade-in {
@@ -79,7 +91,7 @@ main {
     width: 120px;
     height: 120px;
     border-radius: 28px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
     margin: 0 auto 24px;
     display: block;
     object-fit: cover;
@@ -112,13 +124,16 @@ h3 {
     text-align: left;
 }
 
-p, ul, ol {
+p,
+ul,
+ol {
     margin-bottom: 1.5rem;
     text-align: left;
     color: #444;
 }
 
-ul, ol {
+ul,
+ol {
     padding-left: 24px;
 }
 
@@ -147,10 +162,12 @@ strong {
     border-bottom: 1px dotted #e0e0e0;
     padding-bottom: 4px;
 }
+
 .app-info p:last-child {
     border-bottom: none;
     margin-bottom: 0;
 }
+
 .app-info strong {
     color: var(--color-text-light);
     font-weight: 500;
@@ -193,13 +210,15 @@ strong {
     font-weight: 500;
     padding: 8px 16px;
     border-radius: var(--radius-full);
-    background-color: rgba(0,0,0,0.03);
+    background-color: rgba(0, 0, 0, 0.03);
     margin-bottom: 32px;
     transition: all 0.2s;
-    float: left; /* To align left */
+    float: left;
+    /* To align left */
 }
+
 .back-link:hover {
-    background-color: rgba(0,0,0,0.06);
+    background-color: rgba(0, 0, 0, 0.06);
     color: var(--color-primary);
 }
 
@@ -212,7 +231,8 @@ strong {
 }
 
 .language-switcher {
-    background-color: rgba(45, 74, 62, 0.08); /* Transparent Pill */
+    background-color: rgba(45, 74, 62, 0.08);
+    /* Transparent Pill */
     color: var(--color-primary);
     border: none;
     padding: 10px 18px;
@@ -235,7 +255,7 @@ strong {
     top: 120%;
     right: 0;
     background-color: white;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     border-radius: var(--radius-md);
     padding: 8px;
     min-width: 140px;
@@ -296,14 +316,38 @@ footer {
     body {
         padding: 10px;
     }
+
     main {
-        padding: 24px;
-        margin: 20px 0;
+        padding: 20px;
+        margin: 10px 0;
+        width: 100%;
     }
+
+    .app-header {
+        margin-bottom: 30px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
     .links {
         flex-direction: column;
+        gap: 12px;
     }
+
     .link-button {
         width: 100%;
+        padding: 14px 24px;
+    }
+
+    .language-container {
+        top: 15px;
+        right: 15px;
+    }
+
+    .language-switcher {
+        padding: 8px 14px;
+        font-size: 13px;
     }
 }

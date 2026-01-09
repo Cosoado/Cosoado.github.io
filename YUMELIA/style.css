@@ -355,6 +355,15 @@ section {
     .glass {
         padding: 30px 20px;
     }
+
+    .header-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .nav a {
+        margin: 0 10px;
+    }
 }
 
 /* Back Button for Legal Pages */
